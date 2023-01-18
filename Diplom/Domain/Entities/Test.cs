@@ -1,11 +1,13 @@
 ﻿using Microsoft.Build.Framework;
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
+using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
 
 namespace Diplom.Domain.Entities
 {
-	public abstract class Test
+	public  class Test
 	{
-		[Required]
+		[Key]
 		public int Id { get; set; }
 		[Required]
 		public string Type { get; set; }

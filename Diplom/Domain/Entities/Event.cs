@@ -1,10 +1,12 @@
 ﻿using Microsoft.Build.Framework;
+using System.ComponentModel.DataAnnotations;
+using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
 
 namespace Diplom.Domain.Entities
 {
-	public abstract class Event
+	public  class Event
 	{
-		[Required]
+		[Key]
 		public int Id { get;set;}
 		[Required]
 		public string Name { get; set; }

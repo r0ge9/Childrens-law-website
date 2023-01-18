@@ -6,9 +6,9 @@ using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribut
 
 namespace Diplom.Domain.Entities
 {
-	public abstract class Review
+	public  class Review
 	{
-		[Required]
+		[Key]
 		public int Id { get; set; }
 
 		[Display(Name ="FullName"),Required]

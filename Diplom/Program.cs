@@ -1,4 +1,8 @@
+using Diplom.Domain;
+using Diplom.Domain.Repositories.Abstract;
+using Diplom.Domain.Repositories.EF;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews().SetCompatibilityVersion(version: CompatibilityVersion
     .Version_3_0).AddSessionStateTempDataProvider();
+builder.Services.AddTransient<ITestRepository, EFTestRepository>();
+builder.Services.AddTransient<IReviewRepository, EFReviewRepository>();
+builder.Services.AddTransient<IEventRepository, EFEventRepository>();
+builder.Services.AddTransient<DataManager>();
+
+var connection = @"Server=(localdb)\mssqllocaldb;Database=Diplom;Trusted_Connection=True;";
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connection));
 
 var app = builder.Build();
 
