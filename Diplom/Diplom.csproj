@@ -7,18 +7,79 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
-    <Folder Include="Areas\Admin\Views\" />
+    <Content Remove="Views\AdminNews\Edit.cshtml" />
+    <Content Remove="Views\Admin\Admin.cshtml" />
+    <Content Remove="Views\Home\about.cshtml" />
+    <Content Remove="Views\Home\contact.cshtml" />
+    <Content Remove="Views\Home\Event.cshtml" />
+    <Content Remove="Views\Home\News.cshtml" />
+    <Content Remove="Views\Home\Reviews.cshtml" />
+    <Content Remove="Views\News\News.cshtml" />
+    <Content Remove="wwwroot\images\bg_2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="Service\" />
+    <Folder Include="Views\News\" />
+    <Folder Include="Views\AdminForm\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\sass\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\AdminNews\Edit.cshtml" />
+    <None Include="Views\Admin\Admin.cshtml" />
+    <None Include="Views\Admin\Create.cshtml" />
+    <None Include="Views\Admin\admin_test.cshtml" />
+    <None Include="Views\AdminNews\AdminNews.cshtml" />
+    <None Include="Views\Home\About.cshtml" />
+    <None Include="Views\Home\Event.cshtml" />
+    <None Include="Views\Home\News.cshtml" />
+    <None Include="Views\Home\Contact.cshtml" />
+    <None Include="Views\Home\Reviews.cshtml" />
+    <None Include="wwwroot\images\.DS_Store" />
+    <None Include="wwwroot\images\bg_1.jpg" />
+    <None Include="wwwroot\images\bg_2.jpg" />
+    <None Include="wwwroot\images\bg_3.jpg" />
+    <None Include="wwwroot\images\bg_4.jpg" />
+    <None Include="wwwroot\images\bg_5.jpg" />
+    <None Include="wwwroot\images\course-1.jpg" />
+    <None Include="wwwroot\images\course-2.jpg" />
+    <None Include="wwwroot\images\course-3.jpg" />
+    <None Include="wwwroot\images\course-4.jpg" />
+    <None Include="wwwroot\images\course-5.jpg" />
+    <None Include="wwwroot\images\course-6.jpg" />
+    <None Include="wwwroot\images\dept-5.jpg" />
+    <None Include="wwwroot\images\image_1.jpg" />
+    <None Include="wwwroot\images\image_2.jpg" />
+    <None Include="wwwroot\images\image_3.jpg" />
+    <None Include="wwwroot\images\image_4.jpg" />
+    <None Include="wwwroot\images\image_5.jpg" />
+    <None Include="wwwroot\images\image_6.jpg" />
+    <None Include="wwwroot\images\loc.png" />
+    <None Include="wwwroot\images\person_1.jpg" />
+    <None Include="wwwroot\images\person_2.jpg" />
+    <None Include="wwwroot\images\person_3.jpg" />
+    <None Include="wwwroot\images\person_4.jpg" />
+    <None Include="wwwroot\images\staff-1.jpg" />
+    <None Include="wwwroot\images\staff-2.jpg" />
+    <None Include="wwwroot\images\staff-3.jpg" />
+    <None Include="wwwroot\images\staff-4.jpg" />
+    <None Include="wwwroot\images\teacher-1.jpg" />
+    <None Include="wwwroot\images\teacher-2.jpg" />
+    <None Include="wwwroot\images\teacher-3.jpg" />
+    <None Include="wwwroot\images\teacher-4.jpg" />
+    <None Include="wwwroot\images\teacher-5.jpg" />
+    <None Include="wwwroot\images\teacher-6.jpg" />
+    <None Include="wwwroot\images\teacher-7.jpg" />
+    <None Include="wwwroot\images\teacher-8.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
     <PackageReference Include="BundlerMinifier.Core" Version="3.2.449" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.13">
       <PrivateAssets>all</PrivateAssets>
@@ -31,6 +92,12 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\images\bg_2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

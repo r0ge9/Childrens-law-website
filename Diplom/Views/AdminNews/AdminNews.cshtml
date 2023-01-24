@@ -1,0 +1,85 @@
+@model IQueryable<Event>
+    @{
+        @using Diplom.Service
+    }
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+            <h1 class="mb-2 bread">Админ-Панель</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Новости <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+		
+		<section class="ftco-section bg-light">
+			<div class="container">
+				<div class="row">
+            @if(Model.Any())
+            {
+                @foreach(Event entity in Model)
+                {
+                            <div class="col-md-6 col-lg-4 ftco-animate">
+                    <div class="blog-entry">
+                                <a class="block-20 d-flex align-items-end" style="background-image: url(@entity.Image)">
+                      <a asp-controller="Home" asp-action="Event" asp-route-id="@entity.Id" class="block-20 d-flex align-items-end" style="background-image: url('images/image_1.jpg')">
+                                        <div class="meta-date text-center p-2">
+                          <span class="day">@entity.Date.Day</span>
+                          <span class="mos">@Extensions.MonthConverter(entity.Date.Month)</span>
+                          <span class="yr">@entity.Date.Year</span>
+                        </div>
+                      </a>
+                      <div class="text bg-white p-4">
+                        <h3 class="heading"><a href="#">@entity.Name</a></h3>
+                                @{
+                                    var short_text = entity.Text.Split(' ');
+                                }
+                                
+                                @for(int i=0;i<15;i++)
+                                    {
+                                        @Html.Raw(short_text[i]+' ');
+                                    }
+                                    <p>...</p>
+                                <div class="d-flex align-items-center mt-4">
+                           
+                            <p class="ml-auto mb-0">
+                                <a href="#" class="mr-2">@entity.Publisher</a>
+                                <form id="form-@entity.Id" asp-action="Delete" asp-controller="AdminNews" method="post">
+                                <input type="hidden" name="id" value="@entity.Id">
+                                                <a href="#" class="mr-2" onclick="document.getElementById('form-@entity.Id').submit()" >Удалить</a>
+                                                
+                                </form>
+                                          <a asp-controller="AdminNews" asp-action="Edit" asp-route-id="@entity.Id" class="mr-2">Редактировать</a>
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                }
+            }
+          
+       @* <div class="row no-gutters my-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#"><i class="ion-ios-arrow-back"></i></a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><i class="ion-ios-arrow-forward"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+			</div>*@
+            </div>
+            </div>
+		</section>
+
+
+  

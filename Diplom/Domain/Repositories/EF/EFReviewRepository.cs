@@ -32,6 +32,7 @@ namespace Diplom.Domain.Repositories.EF
 		public void DeleteReview(int id)
 		{
 			context.Reviews.Remove(new Review() { Id = id });
+			context.SaveChanges();
 		}
 	}
 }

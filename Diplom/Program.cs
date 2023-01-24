@@ -1,6 +1,7 @@
 using Diplom.Domain;
 using Diplom.Domain.Repositories.Abstract;
 using Diplom.Domain.Repositories.EF;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -8,7 +9,7 @@ using Newtonsoft.Json;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddControllersWithViews().SetCompatibilityVersion(version: CompatibilityVersion
     .Version_3_0).AddSessionStateTempDataProvider();
 builder.Services.AddTransient<ITestRepository, EFTestRepository>();
@@ -39,5 +40,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
 app.Run();

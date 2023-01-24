@@ -32,6 +32,7 @@ namespace Diplom.Domain.Repositories.EF
 		public void DeleteQuestion(int id)
 		{
 			context.Tests.Remove(new Test() { Id = id });
+			context.SaveChanges();
 		}
 	}
 }

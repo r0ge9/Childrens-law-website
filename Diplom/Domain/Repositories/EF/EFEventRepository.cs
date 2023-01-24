@@ -29,6 +29,9 @@ namespace Diplom.Domain.Repositories.EF
 			else { context.Entry(entity).State = EntityState.Modified; }
 			context.SaveChanges();
 		}
-		public void DeleteEvent(int id) { context.Events.Remove(new Event() { Id = id }); }
+		public void DeleteEvent(int id) { 
+			context.Events.Remove(new Event() { Id = id });
+			context.SaveChanges();
+		}
 	}
 }

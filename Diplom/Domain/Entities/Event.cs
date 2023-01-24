@@ -17,6 +17,6 @@ namespace Diplom.Domain.Entities
 		[Required]
 		public string Text { get; set; }
 		
-		public byte[] Image { get; set; }
+		public string Image { get; set; }
 	}
 }
