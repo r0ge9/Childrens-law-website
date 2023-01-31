@@ -19,5 +19,6 @@ namespace Diplom.Domain
 
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<Test> Tests { get; set; }
+		public DbSet<Question> Questions { get; set; }
 	}
 }

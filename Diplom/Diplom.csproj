@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Views\AdminNews\Edit.cshtml" />
+    <Content Remove="Views\AdminTests\AdminTests.cshtml" />
     <Content Remove="Views\Admin\Admin.cshtml" />
     <Content Remove="Views\Home\about.cshtml" />
     <Content Remove="Views\Home\contact.cshtml" />
@@ -28,9 +29,10 @@
 
   <ItemGroup>
     <None Include="Views\AdminNews\Edit.cshtml" />
+    <None Include="Views\AdminTests\AdminTests.cshtml" />
     <None Include="Views\Admin\Admin.cshtml" />
     <None Include="Views\Admin\Create.cshtml" />
-    <None Include="Views\Admin\admin_test.cshtml" />
+    <None Include="Views\AdminTests\EditTest.cshtml" />
     <None Include="Views\AdminNews\AdminNews.cshtml" />
     <None Include="Views\Home\About.cshtml" />
     <None Include="Views\Home\Event.cshtml" />

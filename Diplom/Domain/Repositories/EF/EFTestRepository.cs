@@ -15,21 +15,21 @@ namespace Diplom.Domain.Repositories.EF
 		{
 			return context.Tests;
 		}
-		public Test GetQuestionById(int id)
+		public Test GetTestById(int id)
 		{
 			return context.Tests.FirstOrDefault(x => x.Id == id);
 		}
-		public Test GetTestByType(string name)
+		public Test GetTestByName(string name)
 		{
-			return context.Tests.FirstOrDefault(e => e.Type == name);
+			return context.Tests.FirstOrDefault(e => e.Name == name);
 		}
-		public void SaveQuestion(Test entity)
+		public void SaveTest(Test entity)
 		{
 			if (entity.Id == default(int)) { context.Entry(entity).State = EntityState.Added; }
 			else { context.Entry(entity).State = EntityState.Modified; }
 			context.SaveChanges();
 		}
-		public void DeleteQuestion(int id)
+		public void DeleteTest(int id)
 		{
 			context.Tests.Remove(new Test() { Id = id });
 			context.SaveChanges();

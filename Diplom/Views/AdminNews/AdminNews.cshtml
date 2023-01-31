@@ -38,11 +38,15 @@
                                     var short_text = entity.Text.Split(' ');
                                 }
                                 
-                                @for(int i=0;i<15;i++)
+                                    @for (int i = 0; i < 15; i++)
                                     {
-                                        @Html.Raw(short_text[i]+' ');
+                                        @Html.Raw(short_text[i]+' ')
+                                        ;
+                                        if (i == 14)
+                                        {
+                                            @Html.Raw(short_text[i]+"...")
+                                        }
                                     }
-                                    <p>...</p>
                                 <div class="d-flex align-items-center mt-4">
                            
                             <p class="ml-auto mb-0">
