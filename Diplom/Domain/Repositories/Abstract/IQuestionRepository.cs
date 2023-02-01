@@ -10,5 +10,7 @@ namespace Diplom.Domain.Repositories.Abstract
         Question GetQuestionByTestId(int id);
         void SaveQuestion(Question entity);
         void DeleteQuestion(int id);
-    }
+        IQueryable<Question> GetQuestionsByTestId(int id);
+
+	}
 }

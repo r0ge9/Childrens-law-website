@@ -6,6 +6,14 @@ namespace Diplom.Domain.Entities
 {
     public class Question 
     {
+		public Question()
+		{
+		
+		}
+		public Question(int testId) 
+        {
+            TestId = testId;
+        }
         [Key]
         public int Id { get; set; }
         [Required]

@@ -15,6 +15,7 @@ builder.Services.AddControllersWithViews().SetCompatibilityVersion(version: Comp
 builder.Services.AddTransient<ITestRepository, EFTestRepository>();
 builder.Services.AddTransient<IReviewRepository, EFReviewRepository>();
 builder.Services.AddTransient<IEventRepository, EFEventRepository>();
+builder.Services.AddTransient<IQuestionRepository, EFQuestionRepository>();
 builder.Services.AddTransient<DataManager>();
 
 var connection = @"Server=(localdb)\mssqllocaldb;Database=Diplom;Trusted_Connection=True;";

@@ -6,7 +6,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
                 <h1 class="mb-2 bread">Админ-Панель</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Новости <i class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Тесты <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -33,13 +33,13 @@
 	        		<div class="px-4">
 	        			<p>@test.Description</p>
         			</div>
-        			<p class="button text-center"><a asp-controller="AdminTests" asp-action="Questions" asp-route-id="@test.Id" class="btn btn-primary px-4 py-3">Вопросы</a></p>
+        			<p class="button text-center"><a asp-controller="AdminTests" asp-action="Questions" asp-route-testId="@test.Id" class="btn btn-primary px-4 py-3">Вопросы</a></p>
                                     <form id="form-@test.Id" asp-action="DeleteTest" asp-controller="AdminTests" method="post">
                                     <input type="hidden" name="id" value="@test.Id">
                                                     <a href="#" class="mr-2" onclick="document.getElementById('form-@test.Id').submit()" >Удалить</a>
 
                                     </form>
-                                              <a asp-controller="AdminTests" asp-action="EditTest" asp-route-id="@test.Id" class="mr-2">Редактировать</a>
+                                              <a asp-controller="AdminTests" asp-action="EditTest" asp-route-testId="@test.Id" class="mr-2">Редактировать</a>
         		</div>
         	</div>
             }

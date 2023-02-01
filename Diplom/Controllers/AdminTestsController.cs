@@ -37,20 +37,19 @@ namespace Diplom.Controllers
             data.Tests.DeleteTest(id);
             return RedirectToAction(nameof(AdminTestsController.AdminTests), nameof(AdminTestsController).CutController());
         }
-		public IActionResult EditQuestion(int id)
+		public IActionResult EditQuestion(int id,int testId)
 		{
-			var entity = id == default ? new Question() : data.Questions.GetQuestionById(id);
+			var entity = id == default ? new Question(testId) : data.Questions.GetQuestionById(id);
 			return View(entity);
 		}
 		[HttpPost]
 		public IActionResult EditQuestion(Question model)
 		{
-			if (ModelState.IsValid)
-			{
+			
 				data.Questions.SaveQuestion(model);
 				return RedirectToAction(nameof(AdminController.Admin), nameof(AdminController).CutController());
-			}
-			return View(model);
+			
+			
 		}
 		[HttpPost]
 		public IActionResult DeleteQuestion(int id)
@@ -58,5 +57,10 @@ namespace Diplom.Controllers
 			data.Questions.DeleteQuestion(id);
 			return RedirectToAction(nameof(AdminTestsController.AdminTests), nameof(AdminTestsController).CutController());
 		}
+        public IActionResult Questions(int testId)
+        {
+            ViewBag.TestId = testId;
+            return View(data.Questions.GetQuestionsByTestId(testId));
+        }
 	}
 }

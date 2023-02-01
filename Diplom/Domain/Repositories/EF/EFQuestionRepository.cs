@@ -23,7 +23,11 @@ namespace Diplom.Domain.Repositories.EF
         {
             return context.Questions.FirstOrDefault(e => e.TestId == id);
         }
-        public void SaveQuestion(Question entity)
+		public IQueryable< Question >GetQuestionsByTestId(int id)
+		{
+			return context.Questions.Where(x=>x.TestId==id);
+		}
+		public void SaveQuestion(Question entity)
         {
             if (entity.Id == default(int)) { 
                 context.Entry(entity).State = EntityState.Added; }
