@@ -1,5 +1,6 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IQueryable<Event>
+@{
+	@using Diplom.Service
 }
 
  
@@ -255,39 +256,20 @@
 			<p>Здесь расположены самые важные новости и события твоего маленького и не очень мира, следи за этим разделом - тут много чего полезного!</p>
 		  </div>
 		</div>	
+		
 				<div class="row">
+			@for (int i = 0; i < 5; i++)
+			{
 					<div class="col-md-6 course d-lg-flex ftco-animate">
-						<div class="img" style="background-image: url(images/course-1.jpg);"></div>
+						<div class="img" style="background-image: url(@Model.ElementAt(i).Image);"></div>
 						<div class="text bg-light p-4">
-							<h3><a href="#">Пилотный проект по горячему питанию школьников запустили в Минске</a></h3>
-							<p class="subheading"><span>Дата:</span> 22 декабря 2022</p>
+								<h3><a asp-controller="Home" asp-action="Event" asp-route-id="@Model.ElementAt(i).Id" >@Model.ElementAt(i).Name</a></h3>
+							<p class="subheading"><span>Дата:</span>@Model.ElementAt(i).Date.Day Extensions.MonthConverter(@Model.ElementAt(i).Date.Month) @Model.ElementAt(i).Date.Year</p>
 
 						</div>
 					</div>
-					<div class="col-md-6 course d-lg-flex ftco-animate">
-						<div class="img" style="background-image: url(images/course-2.jpg);"></div>
-						<div class="text bg-light p-4">
-							<h3><a href="#">Language Lesson</a></h3>
-							<p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-
-						</div>
-					</div>
-					<div class="col-md-6 course d-lg-flex ftco-animate">
-						<div class="img" style="background-image: url(images/course-3.jpg);"></div>
-						<div class="text bg-light p-4">
-							<h3><a href="#">Music Lesson</a></h3>
-							<p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-
-						</div>
-					</div>
-					<div class="col-md-6 course d-lg-flex ftco-animate">
-						<div class="img" style="background-image: url(images/course-4.jpg);"></div>
-						<div class="text bg-light p-4">
-							<h3><a href="#">Sports Lesson</a></h3>
-							<p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-
-						</div>
-					</div>
+		}
+					
 				</div>
 			</div>
 		</section>
@@ -554,19 +536,23 @@
 		  </div>
 		</div>
 				<div class="row">
-		  <div class="col-md-6 col-lg-4 ftco-animate">
+					@for(int i=0;i<4;i++)
+			{
+				Random rand= new Random();
+				var id = rand.Next(4, Model.Count());
+			<div class="col-md-6 col-lg-4 ftco-animate">
 			<div class="blog-entry">
-			  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_1.jpg');">
+				  <a asp-controller="Home" asp-action="Event" asp-route-id="id" class="block-20 d-flex align-items-end" style="background-image: url("@Model.ElementAt(id).Image)">
 								<div class="meta-date text-center p-2">
-				  <span class="day">27</span>
-				  <span class="mos">Январь</span>
-				  <span class="yr">2022</span>
+				 <span class="day">@Model.ElementAt(id).Date.Day</span>
+                          <span class="mos">@Extensions.MonthConverter(Model.ElementAt(id).Date.Month)</span>
+                          <span class="yr">@Model.ElementAt(id).Date.Year</span>
 				</div>
 			  </a>
 			  <div class="text bg-white p-4">
-				<h3 class="heading"><a href="#">Эксперт рассказал, почему новая модель вступительной кампании значительно снижает роль репетиторов</a></h3>
+				<h3 class="heading"><a asp-controller="Home" asp-action="Event" asp-route-id="id">@Model.ElementAt(id).Name</a></h3>
 				<div class="d-flex align-items-center mt-4">
-					<p class="mb-0"><a href="#" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
+					<p class="mb-0"><a asp-controller="Home" asp-action="Event" asp-route-id="id" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
 					<p class="ml-auto mb-0">
 						<a href="#" class="mr-2">Admin</a>
 
@@ -575,48 +561,7 @@
 			  </div>
 			</div>
 		  </div>
-		  <div class="col-md-6 col-lg-4 ftco-animate">
-			<div class="blog-entry">
-			  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-				  <span class="day">10</span>
-				  <span class="mos">Декабря</span>
-				  <span class="yr">2023</span>
-				</div>
-			  </a>
-			  <div class="text bg-white p-4">
-				<h3 class="heading"><a href="#">Размер семейного капитала с 1 января 2023 года - 29 950 рублей</a></h3>
-				<div class="d-flex align-items-center mt-4">
-					<p class="mb-0"><a href="#" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
-					<p class="ml-auto mb-0">
-						<a href="#" class="mr-2">Admin</a>
-
-					</p>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		  <div class="col-md-6 col-lg-4 ftco-animate">
-			<div class="blog-entry">
-			  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-				  <span class="day">11</span>
-				  <span class="mos">Декабря</span>
-				  <span class="yr">2022</span>
-				</div>
-			  </a>
-			  <div class="text bg-white p-4">
-				<h3 class="heading"><a href="#">Глава МНС о профильных классах: главная задача - обучить детей налоговой грамотности</a></h3>
-				<div class="d-flex align-items-center mt-4">
-					<p class="mb-0"><a href="#" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
-					<p class="ml-auto mb-0">
-						<a href="#" class="mr-2">Admin</a>
-
-					</p>
-				</div>
-			  </div>
-			</div>
-		  </div>
+			}
 		</div>
 			</div>
 		</section>

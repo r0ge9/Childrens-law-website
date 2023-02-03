@@ -1,9 +1,15 @@
-﻿ <footer class="ftco-footer ftco-bg-dark ftco-section">
+﻿@model IQueryable<Event>
+@{
+    @using Diplom.Service
+    Random rand = new Random();
+    var id = rand.Next(4, Model.Count());
+}
+<footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2">Есть вопрос?</h2>
+                <h2 class="ftco-heading-2">Контакты</h2>
                 <div class="block-23 mb-3">
                   <ul>
                     <li><span class="icon icon-map-marker"></span><span class="text">Республика Беларусь, г.Минск, Неманская 45</span></li>
@@ -17,23 +23,26 @@
             <div class="ftco-footer-widget mb-5">
               <h2 class="ftco-heading-2">Новости</h2>
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg)"></a>
+                <a class="blog-img mr-4" style="background-image: url(@Model.ElementAt(id).Image)"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a asp-controller="Home" asp-action="Event" asp-route-id="@Model.ElementAt(id).Id">@Model.ElementAt(id).Name</a></h3>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a ><span class="icon-calendar"></span> @Extensions.MonthConverter(Model.ElementAt(id).Date.Month) @Model.ElementAt(id).Date.Day, @Model.ElementAt(id).Date.Year</a></div>
+                    <div><a ><span class="icon-person"></span> @Model.ElementAt(id).Publisher</a></div>
 
                   </div>
                 </div>
               </div>
+                    @{
+                        id = rand.Next(4, Model.Count());
+                    }
               <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg)"></a>
+                <a class="blog-img mr-4" style="background-image: url(@Model.ElementAt(id).Image)"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+                  <h3 class="heading"><a asp-controller="Home" asp-action="Event" asp-route-id="@Model.ElementAt(id).Id">@Model.ElementAt(id).Name</a></h3>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> Dec 25, 2018</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                    <div><a ><span class="icon-calendar"></span> @Extensions.MonthConverter(Model.ElementAt(id).Date.Month) @Model.ElementAt(id).Date.Day, @Model.ElementAt(id).Date.Year</a></div>
+                    <div><a ><span class="icon-person"></span> @Model.ElementAt(id).Publisher</a></div>
 
                   </div>
                 </div>
@@ -44,12 +53,12 @@
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Ссылки</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Главная</a></li>
+                <li><a href="/Home/Index"><span class="ion-ios-arrow-round-forward mr-2"></span>Главная</a></li>
                 <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Правовая библиотека</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Игры</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Новости</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Полезная информация</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>О нас</a></li>
+                <li><a href=""><span class="ion-ios-arrow-round-forward mr-2"></span>Игры</a></li>
+                <li><a href="/Home/News"><span class="ion-ios-arrow-round-forward mr-2"></span>Новости</a></li>
+                <li><a href="/Reviews/Reviews"><span class="ion-ios-arrow-round-forward mr-2"></span>Отзывы</a></li>
+                <li><a href="/Home/About"><span class="ion-ios-arrow-round-forward mr-2"></span>О нас</a></li>
               </ul>
             </div>
           </div>
