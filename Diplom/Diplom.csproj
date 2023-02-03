@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Views\AdminNews\Edit.cshtml" />
-    <Content Remove="Views\AdminTests\AdminTests.cshtml" />
+    <Content Remove="Views\AdminTests\Tests.cshtml" />
     <Content Remove="Views\Admin\Admin.cshtml" />
     <Content Remove="Views\Home\about.cshtml" />
     <Content Remove="Views\Home\contact.cshtml" />
@@ -21,19 +21,19 @@
 
   <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
+    <Folder Include="Views\AdminNews\" />
+    <Folder Include="Views\AdminTests\" />
     <Folder Include="Views\News\" />
-    <Folder Include="Views\AdminForm\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\sass\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\AdminNews\Edit.cshtml" />
-    <None Include="Views\AdminTests\AdminTests.cshtml" />
+    <None Include="Views\Admin\EditEvent.cshtml" />
+    <None Include="Views\Admin\Tests.cshtml" />
     <None Include="Views\Admin\Admin.cshtml" />
-    <None Include="Views\Admin\Create.cshtml" />
-    <None Include="Views\AdminTests\EditTest.cshtml" />
-    <None Include="Views\AdminNews\AdminNews.cshtml" />
+    <None Include="Views\Admin\EditTest.cshtml" />
+    <None Include="Views\Admin\News.cshtml" />
     <None Include="Views\Home\About.cshtml" />
     <None Include="Views\Home\Event.cshtml" />
     <None Include="Views\Home\News.cshtml" />

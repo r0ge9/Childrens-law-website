@@ -21,26 +21,81 @@ namespace Diplom.Controllers
 			return View(data);
 		}
 
-		public IActionResult Edit()
+		public IActionResult News()
 		{
-			return RedirectToAction(nameof(AdminNewsController.AdminNews), nameof(AdminNewsController).CutController());
+			return View(data.Events.GetEvents());
 		}
-		
-		public IActionResult Create(int id)
+		public IActionResult EditEvent(int id)
 		{
-            var entity = id == default ? new Event() : data.Events.GetEventById(id);
-            return View(entity);
-        }
-        [HttpPost]
-        public IActionResult Create(Event model)
-        {
-            //if (ModelState.IsValid)
-            //{
-                data.Events.SaveEvent(model);
-                return RedirectToAction(nameof(AdminController.Admin), nameof(AdminController).CutController());
-           // }
-            //return View(model);
-        }
+			var entity = id == default ? new Event() : data.Events.GetEventById(id);
+			return View(entity);
+		}
+		[HttpPost]
+		public IActionResult EditEvent(Event model)
+		{
+			if (ModelState.IsValid)
+			{
+				data.Events.SaveEvent(model);
+				return RedirectToAction(nameof(AdminController.Admin), nameof(AdminController).CutController());
+			}
+			return View(model);
+		}
+		[HttpPost]
+		public IActionResult DeleteEvent(int id)
+		{
+			data.Events.DeleteEvent(id);
+			return RedirectToAction(nameof(AdminController.News), nameof(AdminController).CutController());
+		}
+		public IActionResult Tests()
+		{
+			return View(data.Tests.GetTests());
+		}
+		public IActionResult EditTest(int id)
+		{
+			var entity = id == default ? new Test() : data.Tests.GetTestById(id);
+			return View(entity);
+		}
+		[HttpPost]
+		public IActionResult EditTest(Test model)
+		{
+			if (ModelState.IsValid)
+			{
+				data.Tests.SaveTest(model);
+				return RedirectToAction(nameof(AdminController.Admin), nameof(AdminController).CutController());
+			}
+			return View(model);
+		}
+		[HttpPost]
+		public IActionResult DeleteTest(int id)
+		{
+			data.Tests.DeleteTest(id);
+			return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
+		}
+		public IActionResult EditQuestion(int id, int testId)
+		{
+			var entity = id == default ? new Question(testId) : data.Questions.GetQuestionById(id);
+			return View(entity);
+		}
+		[HttpPost]
+		public IActionResult EditQuestion(Question model)
+		{
 
-    }
+			data.Questions.SaveQuestion(model);
+			return RedirectToAction(nameof(AdminController.Admin), nameof(AdminController).CutController());
+
+
+		}
+		[HttpPost]
+		public IActionResult DeleteQuestion(int id)
+		{
+			data.Questions.DeleteQuestion(id);
+			return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
+		}
+		public IActionResult Questions(int testId)
+		{
+			ViewBag.TestId = testId;
+			return View(data.Questions.GetQuestionsByTestId(testId));
+		}
+
+	}
 }

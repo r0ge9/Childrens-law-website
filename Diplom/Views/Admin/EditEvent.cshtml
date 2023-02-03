@@ -7,7 +7,7 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread">Админ-панель</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="admin_news.html">Новости <i>-</i></a></span> <span><a href="admin_test.html">Тесты </span><a/></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a href="/Admin/News">Новости <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a >Изменение новости<i class="ion-ios-arrow-forward"></i></a></span></p>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-						<form asp-controller="AdminNews" asp-action="Edit" method="post">
+						<form asp-controller="Admin" asp-action="EditEvent" method="post">
                             <input type="hidden" asp-for="Id" />
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Название" asp-for="Name">

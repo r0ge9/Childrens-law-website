@@ -33,28 +33,43 @@
 	        		<div class="px-4">
 	        			<p>@test.Description</p>
         			</div>
-        			<p class="button text-center"><a asp-controller="AdminTests" asp-action="Questions" asp-route-testId="@test.Id" class="btn btn-primary px-4 py-3">Вопросы</a></p>
-                                    <form id="form-@test.Id" asp-action="DeleteTest" asp-controller="AdminTests" method="post">
+        			<p class="button text-center"><a asp-controller="Admin" asp-action="Questions" asp-route-testId="@test.Id" class="btn btn-primary px-4 py-3">Вопросы</a></p>
+                                    <form id="form-@test.Id" asp-action="DeleteTest" asp-controller="Admin" method="post">
                                     <input type="hidden" name="id" value="@test.Id">
                                                     <a href="#" class="mr-2" onclick="document.getElementById('form-@test.Id').submit()" >Удалить</a>
 
                                     </form>
-                                              <a asp-controller="AdminTests" asp-action="EditTest" asp-route-testId="@test.Id" class="mr-2">Редактировать</a>
+                                              <a asp-controller="Admin" asp-action="EditTest" asp-route-testId="@test.Id" class="mr-2">Редактировать</a>
         		</div>
         	</div>
             }
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="pricing-entry bg-light pb-4 text-center">
+                        <div>
+
+                            <p><span class="price">Создайте еще один тест!</span> </p>
+                        </div>
+                        
+                        <p class="button text-center"><a asp-controller="Admin" asp-action="EditTest"  class="btn btn-primary px-4 py-3">Создать</a></p>
+                        </div>
+                        </div>
+                       
             }
             else
             {
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                <div class="pricing-entry bg-light pb-4 text-center">
-                    <div>
+                
 
-                        <p><span class="price">Тестов нет, создайте первый!</span> </p>
-                        <p class="button text-center"><a href="#" class="btn btn-primary px-4 py-3">Создать</a></p>
-                    </div>
-                    </div>
-                    </div>
+                                <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="pricing-entry bg-light pb-4 text-center">
+                            <div>
+
+                                <p><span class="price">Тестов нет, создайте первый!</span> </p>
+                            </div>
+
+                            <p class="button text-center"><a asp-controller="Admin" asp-action="EditTest"  class="btn btn-primary px-4 py-3">Создать</a></p>
+                            </div>
+                            </div>
+                   
             }
     	</div>
             </div>
