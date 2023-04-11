@@ -1,7 +1,8 @@
 @model IQueryable<Review>
 	@{
-		@using Diplom.Domain.Entities
-	}
+	@using Diplom.Domain.Entities
+
+}
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
       <div class="overlay"></div>
       <div class="container">
@@ -14,24 +15,84 @@
       </div>
     </section>
 		
+	
+
 		<section class="ftco-section ftco-no-pb">
 			<div class="container">
+			@*	<div class="row justify-content-end">
+				<div class="col-md-6 py-5 px-md-5 bg-primary">
+			  <div class="heading-section heading-section-white ftco-animate mb-5">
+				<h2 class="mb-4">Оставьте отзыв!</h2>
+				<p>Отзыв будет проверен администрацией перед публикацией</p>
+			  </div>
+			  <form asp-controller="Home" asp-action="Reviews" method="post" class="appointment-form ftco-animate">
+						<div class="d-md-flex">
+							<div class="form-group">
+								<input type="text" class="form-control" asp-for="@rev.Name"  placeholder="Имя">
+							</div>
+							<div class="form-group ml-md-4">
+								<input type="text" class="form-control" asp-for="@rev.Image" placeholder="Ссылка">
+							</div>
+						</div>
+						<div class="d-md-flex">
+							<div class="form-group">
+								<div class="form-field">
+							  <div class="select-wrap">
+					  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+					  <select name="" id="" asp-for="@rev.Sex" class="form-control">
+						  <option value="">Отец или мать?</option>
+						<option value="">Мать</option>
+						<option value="">Отец</option>
+					  </select>
+					</div>
+					  </div>
+							</div>
+							<!-- <div class="form-group ml-md-4">
+								<input type="text" class="form-control" placeholder="Phone">
+							</div> -->
+						</div>
+						<div class="d-md-flex">
+							<div class="form-group">
+					  <textarea name="" id="" cols="30" rows="2" class="form-control" asp-for="@rev.Text" placeholder="Текст"></textarea>
+					</div>
+					<div class="form-group ml-md-4">
+					  <input type="submit" value="Отправить" class="btn btn-secondary py-3 px-4">
+					</div>
+						</div>
+					</form>
+				</div>
+		</div>*@
 				<div class="row">
+					@foreach(var item in Model)
+						{
 					<div class="col-md-6 col-lg-3 ftco-animate">
+						
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
+								<div class="img align-self-stretch" style="background-image: url(@item.Image);"></div>
 							</div>
 							<div class="text pt-3 text-center">
-								<h3>Bianca Wilson</h3>
-								<span class="position mb-2">Teacher</span>
+								<h3>@item.Name</h3>
+								<span class="position mb-2">@item.Sex</span>
 								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+									<p>@item.Text</p>
 									
 	              </div>
 							</div>
 						</div>
-					</div>
+						</div>
+						}
+						 <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="pricing-entry bg-light pb-4 text-center">
+                            <div>
+
+                                <p><span class="price">Оставьте свой отзыв!</span> </p>
+                            </div>
+
+                            <p class="button text-center"><a asp-controller="Home" asp-action="AddReview"  class="btn btn-primary px-4 py-3">Оставить</a></p>
+                            </div>
+                </div>
+					
 					</div>
 				</div>
 					</section>

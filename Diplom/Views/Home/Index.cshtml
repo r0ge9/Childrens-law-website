@@ -1,274 +1,283 @@
 ﻿@model IQueryable<Event>
 @{
 	@using Diplom.Service
+	int size = Model.Count();
 }
 
- 
 
-	<section class="home-slider owl-carousel">
-	  <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
-		  <div class="overlay"></div>
+
+<section class="home-slider owl-carousel">
+	<div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+		<div class="overlay"></div>
 		<div class="container">
-		  <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-		  <div class="col-md-8 text-center ftco-animate">
-			<h1 class="mb-4">Права и обязанности <span>детей</span></h1>
-			<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
-		  </div>
+			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-center ftco-animate">
+					<h1 class="mb-4">Права и обязанности <span>детей</span></h1>
+					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
+				</div>
+			</div>
 		</div>
-		</div>
-	  </div>
+	</div>
 
-	  <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
-		  <div class="overlay"></div>
+	<div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+		<div class="overlay"></div>
 		<div class="container">
-		  <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-		  <div class="col-md-8 text-center ftco-animate">
-			<h1 class="mb-4">Интернет и<span> ребенок</span></h1>
-			<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
-		  </div>
-		</div>
-		</div>
-	  </div>
-	</section>
-
-	<section class="ftco-services ftco-no-pb">
-			<div class="container-wrap">
-				<div class="row no-gutters">
-		  <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary">
-			<div class="media block-6 d-block text-center">
-			  <div class="icon d-flex justify-content-center align-items-center">
-					<span class="flaticon-teacher"></span>
-			  </div>
-			  <div class="media-body p-2 mt-3">
-				<h3 class="heading">Детям и подросткам</h3>
-				<p>В этом разделе вы узнаете много полезной информаций для жизни в школьной среде, а так же и в повседневной.</p>
-			  </div>
-			</div>      
-		  </div>
-		  <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary">
-			<div class="media block-6 d-block text-center">
-			  <div class="icon d-flex justify-content-center align-items-center">
-					<span class="flaticon-reading"></span>
-			  </div>
-			  <div class="media-body p-2 mt-3">
-				<h3 class="heading">Родителям</h3>
-				<p>В этом разделе родители могут ознакомиться с правами ребенка, как првильно его воспитывать и как помочь своему ребенку в трудных ситуациях.</p>
-			  </div>
-			</div>    
-		  </div>
-		  <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth">
-			<div class="media block-6 d-block text-center">
-			  <div class="icon d-flex justify-content-center align-items-center">
-					<span class="flaticon-books"></span>
-			  </div>
-			  <div class="media-body p-2 mt-3">
-				<h3 class="heading">Учителям</h3>
-				<p>Раздел будет полезен для учителей, тут вы сможете узнать мнения экспертов о эффективных моделях преподования, как помочь ребенку при унижениях в школе и т.д.</p>
-			  </div>
-			</div>      
-		  </div>
-		  <div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-quarternary">
-			<div class="media block-6 d-block text-center">
-			  <div class="icon d-flex justify-content-center align-items-center">
-					<span class="flaticon-diploma"></span>
-			  </div>
-			  <div class="media-body p-2 mt-3">
-				<h3 class="heading">О проекте</h3>
-				<p>В этом разделе вы узнаете больше о нашем проекте, его разработчиках и о экспертах которые предоставляют всю информацию.</p>
-			  </div>
-			</div>      
-		  </div>
-		</div>
-			</div>
-		</section>
-
-		<section class="ftco-section ftco-no-pt ftc-no-pb">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
-						<div class="text px-4 ftco-animate">
-				  <h2 class="mb-4">Добро пожаловать в наш "Банк знаний"</h2>
-							<p>Тут ты узнаешь про все эти разделы более подробно и понятно. Не пугайся этих умных слов, наша команда сделала все просто для маленьких и не самых - если хочешь узнать больше, то жми на кнопку.</p>
-							<p><a href="#" class="btn btn-secondary px-4 py-3">Перейти в банк</a></p>
-						</div>
-					</div>
-					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-			  <h2 class="mb-4">ЗАКОНЫ КОТОРЫЕ ТЕБЕ НУЖНО ЗНАТЬ</h2>
-						<div class="row mt-5">
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
-									<div class="text">
-										<h3>Основы конституционного строя</h3>
-
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
-									<div class="text">
-										<h3>Гражданство, место жительства, выезд за пределы Республики Беларусь, имя ребенка</h3>
-
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
-									<div class="text">
-										<h3>Права ребенка</h3>
-
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="services-2 d-flex">
-									<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
-									<div class="text">
-										<h3>Социально-экономические, культурные права несовершеннолетних, молодёжи</h3>
-
-									</div>
-								</div>
-							</div>
-
-
-						</div>
-					</div>
+			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+				<div class="col-md-8 text-center ftco-animate">
+					<h1 class="mb-4">Интернет и<span> ребенок</span></h1>
+					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
-		<section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9">
-						<h2>Познавательные игры ждут тебя</h2>
-						<p class="mb-0">Думаешь уже достаточно знаешь о правах и обязанностях? Тогда сыграй в игры которые мы для тебя приготовили и проверь себя!</p>
+<section class="ftco-services ftco-no-pb">
+	<div class="container-wrap">
+		<div class="row no-gutters">
+			<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-primary">
+				<div class="media block-6 d-block text-center">
+					<div class="icon d-flex justify-content-center align-items-center">
+						<span class="flaticon-teacher"></span>
 					</div>
-					<div class="col-md-3 d-flex align-items-center">
-						<p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Я готов!</a></p>
+					<div class="media-body p-2 mt-3">
+						<h3 class="heading">Детям и подросткам</h3>
+						<p>В этом разделе вы узнаете много полезной информаций для жизни в школьной среде, а так же и в повседневной.</p>
 					</div>
+				</div>      
+			</div>
+			<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-tertiary">
+				<div class="media block-6 d-block text-center">
+					<div class="icon d-flex justify-content-center align-items-center">
+						<span class="flaticon-reading"></span>
+					</div>
+					<div class="media-body p-2 mt-3">
+						<h3 class="heading">Родителям</h3>
+						<p>В этом разделе родители могут ознакомиться с правами ребенка, как првильно его воспитывать и как помочь своему ребенку в трудных ситуациях.</p>
+					</div>
+				</div>    
+			</div>
+			<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-fifth">
+				<div class="media block-6 d-block text-center">
+					<div class="icon d-flex justify-content-center align-items-center">
+						<span class="flaticon-books"></span>
+					</div>
+					<div class="media-body p-2 mt-3">
+						<h3 class="heading">Учителям</h3>
+						<p>Раздел будет полезен для учителей, тут вы сможете узнать мнения экспертов о эффективных моделях преподования, как помочь ребенку при унижениях в школе и т.д.</p>
+					</div>
+				</div>      
+			</div>
+			<div class="col-md-3 d-flex services align-self-stretch pb-4 px-4 ftco-animate bg-quarternary">
+				<div class="media block-6 d-block text-center">
+					<div class="icon d-flex justify-content-center align-items-center">
+						<span class="flaticon-diploma"></span>
+					</div>
+					<div class="media-body p-2 mt-3">
+						<h3 class="heading">О проекте</h3>
+						<p>В этом разделе вы узнаете больше о нашем проекте, его разработчиках и о экспертах которые предоставляют всю информацию.</p>
+					</div>
+				</div>      
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftc-no-pb">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
+				<div class="text px-4 ftco-animate">
+					<h2 class="mb-4">Добро пожаловать в нашу "Правовую библиотеку"</h2>
+					<p>Тут ты узнаешь про все эти разделы более подробно и понятно. Не пугайся этих умных слов, наша команда сделала все просто для маленьких и не самых - если хочешь узнать больше, то жми на кнопку.</p>
+					<p><a href="#" class="btn btn-secondary px-4 py-3">Перейти в библиотеку</a></p>
 				</div>
 			</div>
-		</section>
+			<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+				<h2 class="mb-4">ЗАКОНЫ КОТОРЫЕ ТЕБЕ НУЖНО ЗНАТЬ</h2>
+				<div class="row mt-5">
+					<div class="col-lg-6">
+						<div class="services-2 d-flex">
+							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+							<div class="text">
+								<h3>Основы конституционного строя</h3>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="services-2 d-flex">
+							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
+							<div class="text">
+								<h3>Гражданство, место жительства, выезд за пределы Республики Беларусь, имя ребенка</h3>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="services-2 d-flex">
+							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
+							<div class="text">
+								<h3>Права ребенка</h3>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="services-2 d-flex">
+							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
+							<div class="text">
+								<h3>Социально-экономические, культурные права несовершеннолетних, молодёжи</h3>
+
+							</div>
+						</div>
+					</div>
 
 
-		<!-- <section class="ftco-section ftco-no-pb">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-		  <div class="col-md-8 text-center heading-section ftco-animate">
-			<h2 class="mb-4"><span>Certified</span> Teachers</h2>
-			<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-		  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<h2>Познавательные игры ждут тебя</h2>
+				<p class="mb-0">Думаешь уже достаточно знаешь о правах и обязанностях? Тогда сыграй в игры которые мы для тебя приготовили и проверь себя!</p>
+			</div>
+			<div class="col-md-3 d-flex align-items-center">
+				<p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Я готов!</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="ftco-section ftco-no-pb">
+<div class="container">
+<div class="row justify-content-center mb-5 pb-2">
+<div class="col-md-8 text-center heading-section ftco-animate">
+<h2 class="mb-4"><span>Certified</span> Teachers</h2>
+<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+</div>
+</div>	
+<div class="row">
+<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="staff">
+<div class="img-wrap d-flex align-items-stretch">
+<div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
+</div>
+<div class="text pt-3 text-center">
+<h3>Bianca Wilson</h3>
+<span class="position mb-2">Teacher</span>
+<div class="faded">
+<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<ul class="ftco-social text-center">
+<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="staff">
+<div class="img-wrap d-flex align-items-stretch">
+<div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
+</div>
+<div class="text pt-3 text-center">
+<h3>Mitch Parker</h3>
+<span class="position mb-2">English Teacher</span>
+<div class="faded">
+<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<ul class="ftco-social text-center">
+<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="staff">
+<div class="img-wrap d-flex align-items-stretch">
+<div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
+</div>
+<div class="text pt-3 text-center">
+<h3>Stella Smith</h3>
+<span class="position mb-2">Art Teacher</span>
+<div class="faded">
+<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<ul class="ftco-social text-center">
+<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 ftco-animate">
+<div class="staff">
+<div class="img-wrap d-flex align-items-stretch">
+<div class="img align-self-stretch" style="background-image: url(images/teacher-4.jpg);"></div>
+</div>
+<div class="text pt-3 text-center">
+<h3>Monshe Henderson</h3>
+<span class="position mb-2">Science Teacher</span>
+<div class="faded">
+<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+<ul class="ftco-social text-center">
+<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
+<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section> -->
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row justify-content-center mb-5 pb-2">
+			<div class="col-md-8 text-center heading-section ftco-animate">
+				<h2 class="mb-4"><span>Важные</span> События</h2>
+				<p>Здесь расположены самые важные новости и события твоего маленького и не очень мира, следи за этим разделом - тут много чего полезного!</p>
+			</div>
 		</div>	
-				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Bianca Wilson</h3>
-								<span class="position mb-2">Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-					  </ul>
-				  </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Mitch Parker</h3>
-								<span class="position mb-2">English Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-					  </ul>
-				  </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Stella Smith</h3>
-								<span class="position mb-2">Art Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-					  </ul>
-				  </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-4.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Monshe Henderson</h3>
-								<span class="position mb-2">Science Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-						<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-						<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-					  </ul>
-				  </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
 
-		<section class="ftco-section">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-		  <div class="col-md-8 text-center heading-section ftco-animate">
-			<h2 class="mb-4"><span>Важные</span> События</h2>
-			<p>Здесь расположены самые важные новости и события твоего маленького и не очень мира, следи за этим разделом - тут много чего полезного!</p>
-		  </div>
-		</div>	
-		
-				<div class="row">
-			@for (int i = 0; i < 5; i++)
+		<div class="row">
+			@{
+				int count = 0;
+			}
+			@foreach(var ent in Model)
 			{
+				if(count==4)
+				{
+					break;
+				}
 					<div class="col-md-6 course d-lg-flex ftco-animate">
-						<div class="img" style="background-image: url(@Model.ElementAt(i).Image);"></div>
+						<div class="img" style="background-image: url(@ent.Image);"></div>
 						<div class="text bg-light p-4">
-								<h3><a asp-controller="Home" asp-action="Event" asp-route-id="@Model.ElementAt(i).Id" >@Model.ElementAt(i).Name</a></h3>
-							<p class="subheading"><span>Дата:</span>@Model.ElementAt(i).Date.Day Extensions.MonthConverter(@Model.ElementAt(i).Date.Month) @Model.ElementAt(i).Date.Year</p>
+								<h3><a asp-controller="Home" asp-action="Event" asp-route-id="@ent.Id" >@ent.Name</a></h3>
+							<p class="subheading"><span>Дата:</span>@ent.Date.Day @Extensions.MonthConverter(@ent.Date.Month) @ent.Date.Year</p>
 
 						</div>
-					</div>
-		}
+				</div>
+				count++;
+			}
 					
 				</div>
 			</div>
@@ -332,7 +341,7 @@
 		<div class="row justify-content-center mb-5 pb-2">
 		  <div class="col-md-8 text-center heading-section ftco-animate">
 			<h2 class="mb-4"><span>Отзывы</span> о нас</h2>
-			<p>Здесь все отзывы людей, которые захотели высказаться о работе нашей команды, мы учитываем все пожелания и критику, так что не стесняйтесь и пишите все что думаете.</p>
+			<p>Здесь находятся отзывы людей, которые захотели высказаться о работе нашей команды, мы учитываем все пожелания и критику, так что не стесняйтесь и пишите все что думаете.</p>
 		  </div>
 		</div>
 		<div class="row ftco-animate justify-content-center">
@@ -414,7 +423,7 @@
 	  </div>
 	</section>
 
-	<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+	@*<section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row justify-content-end">
 				<div class="col-md-6 py-5 px-md-5 bg-primary">
@@ -422,10 +431,10 @@
 				<h2 class="mb-4">Оставьте отзыв!</h2>
 				<p>Отзыв будет проверен администрацией перед публикацией</p>
 			  </div>
-			  <form action="#" class="appointment-form ftco-animate">
+			  <form asp-controller="Home" asp-action="SendReview" class="appointment-form ftco-animate">
 						<div class="d-md-flex">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Имя">
+								<input type="text" class="form-control"  placeholder="Имя">
 							</div>
 							<div class="form-group ml-md-4">
 								<input type="text" class="form-control" placeholder="Фамилия">
@@ -460,7 +469,7 @@
 				</div>
 		</div>
 		</div>
-	</section>
+	</section>*@
 
 	<!-- <section class="ftco-section">
 		<div class="container">
@@ -536,31 +545,40 @@
 		  </div>
 		</div>
 				<div class="row">
-					@for(int i=0;i<4;i++)
+			@{
+				count = 0;
+			}
+					@foreach(var ent in Model)
 			{
+				if (count == 4)
+				{
+					break;
+				}
 				Random rand= new Random();
-				var id = rand.Next(4, Model.Count());
-			<div class="col-md-6 col-lg-4 ftco-animate">
+				var id = rand.Next(4, size);
+				
+				<div class="col-md-6 col-lg-4 ftco-animate">
 			<div class="blog-entry">
-				  <a asp-controller="Home" asp-action="Event" asp-route-id="id" class="block-20 d-flex align-items-end" style="background-image: url("@Model.ElementAt(id).Image)">
+				  <a asp-controller="Home" asp-action="Event" asp-route-id="@ent.Id" class="block-20 d-flex align-items-end" style="background-image: url(@ent.Image)">
 								<div class="meta-date text-center p-2">
-				 <span class="day">@Model.ElementAt(id).Date.Day</span>
-                          <span class="mos">@Extensions.MonthConverter(Model.ElementAt(id).Date.Month)</span>
-                          <span class="yr">@Model.ElementAt(id).Date.Year</span>
+				 <span class="day">@ent.Date.Day</span>
+                          <span class="mos">@Extensions.MonthConverter(ent.Date.Month)</span>
+                          <span class="yr">@ent.Date.Year</span>
 				</div>
 			  </a>
 			  <div class="text bg-white p-4">
-				<h3 class="heading"><a asp-controller="Home" asp-action="Event" asp-route-id="id">@Model.ElementAt(id).Name</a></h3>
+					<h3 class="heading"><a asp-controller="Home" asp-action="Event" asp-route-id="@ent.Id">@ent.Name</a></h3>
 				<div class="d-flex align-items-center mt-4">
-					<p class="mb-0"><a asp-controller="Home" asp-action="Event" asp-route-id="id" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
+						<p class="mb-0"><a asp-controller="Home" asp-action="Event" asp-route-id="@ent.Id" class="btn btn-secondary">Узнать больше <span class="ion-ios-arrow-round-forward"></span></a></p>
 					<p class="ml-auto mb-0">
-						<a href="#" class="mr-2">Admin</a>
+						<a href="#" class="mr-2">@ent.Publisher</a>
 
 					</p>
 				</div>
 			  </div>
 			</div>
-		  </div>
+				</div>
+				count++;
 			}
 		</div>
 			</div>

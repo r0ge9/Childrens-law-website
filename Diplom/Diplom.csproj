@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\AdminNews\Edit.cshtml" />
-    <Content Remove="Views\AdminTests\Tests.cshtml" />
     <Content Remove="Views\Admin\Admin.cshtml" />
     <Content Remove="Views\Home\about.cshtml" />
     <Content Remove="Views\Home\contact.cshtml" />
@@ -21,8 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="Views\AdminNews\" />
-    <Folder Include="Views\AdminTests\" />
     <Folder Include="Views\News\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\sass\" />

@@ -1,6 +1,7 @@
 ﻿using Diplom.Domain;
 using Diplom.Domain.Entities;
 using Diplom.Models;
+using Diplom.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -19,7 +20,7 @@ namespace Diplom.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(dataManager.Events.GetEvents());
         }
 
         public IActionResult About()
@@ -34,8 +35,32 @@ namespace Diplom.Controllers
         {
             return View(dataManager.Events.GetEvents());
         }
-
-        public IActionResult Event(int id)
+        [HttpGet]
+		public IActionResult Reviews()
+		{
+            ViewBag.Review = new Review();
+			return View(dataManager.Reviews.GetReviews());
+		}
+		
+		[HttpGet]
+		public IActionResult AddReview()
+		{
+			ViewBag.Review = new Review();
+			return View();
+		}
+        [HttpPost]
+        public IActionResult AddReview(Review model)
+		{
+           
+            
+			if (ModelState.IsValid)
+			{
+				dataManager.Reviews.SaveReview(model);
+				return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
+			}
+			return View(model);
+		}
+		public IActionResult Event(int id)
         {
             return View("Event",dataManager.Events.GetEventById(id));
         }

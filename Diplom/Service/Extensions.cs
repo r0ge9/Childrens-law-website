@@ -25,6 +25,11 @@
             };
             return months[month];
         }
+        public static string[] GetSexes() 
+        {
+            string[] sexes = { "Отец", "Мать" };
+            return sexes;
+        }
     }
 }
 
