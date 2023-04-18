@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>about us</value>
+  </data>
+  <data name="Awards" xml:space="preserve">
+    <value>Awards</value>
+  </data>
+  <data name="BoxName1" xml:space="preserve">
+    <value>To children and teenagers</value>
+  </data>
+  <data name="BoxName2" xml:space="preserve">
+    <value>To parents</value>
+  </data>
+  <data name="BoxName3" xml:space="preserve">
+    <value>To teachers</value>
+  </data>
+  <data name="BoxName4" xml:space="preserve">
+    <value>About project</value>
+  </data>
+  <data name="BoxText1" xml:space="preserve">
+    <value>In this section you will learn a lot of useful information for life in the school environment, as well as in everyday life.</value>
+  </data>
+  <data name="BoxText2" xml:space="preserve">
+    <value>In this section parents can learn about their child's rights, how to raise their child properly, and how to help their child in difficult situations.</value>
+  </data>
+  <data name="BoxText3" xml:space="preserve">
+    <value>The section will be useful for teachers, here you can learn expert opinions on effective teaching models, how to help a child with humiliation at school, etc.</value>
+  </data>
+  <data name="BoxText4" xml:space="preserve">
+    <value>In this section you will learn more about our project, its developers and the experts who provide all the information.</value>
+  </data>
+  <data name="Childrens" xml:space="preserve">
+    <value>Children we helped</value>
+  </data>
+  <data name="Citizen" xml:space="preserve">
+    <value>Citizenship, place of residence, departure from the Republic of Belarus, name of the child</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="EventsText" xml:space="preserve">
+    <value>Here are the most important news and events of your little and not so little world, keep an eye on this section - there is a lot of useful stuff!</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Positive feedback</value>
+  </data>
+  <data name="five" xml:space="preserve">
+    <value>5 years</value>
+  </data>
+  <data name="Fundamentals" xml:space="preserve">
+    <value>Fundamentals of the constitutional order</value>
+  </data>
+  <data name="GamesText" xml:space="preserve">
+    <value>You think you know enough about rights and responsibilities? Then play the games we have prepared for you and test yourself!</value>
+  </data>
+  <data name="GamesWelcome" xml:space="preserve">
+    <value>Cognitive games are waiting for you</value>
+  </data>
+  <data name="Important" xml:space="preserve">
+    <value>Important</value>
+  </data>
+  <data name="LawBut" xml:space="preserve">
+    <value>To library</value>
+  </data>
+  <data name="LawText" xml:space="preserve">
+    <value>Here you will learn about all these sections in more detail and clearly. Don't be intimidated by these clever words, our team has made it simple for the little ones and not the most - if you want to know more, click on the button.</value>
+  </data>
+  <data name="MainLoop" xml:space="preserve">
+    <value>Children's rights and responsibilities</value>
+  </data>
+  <data name="MainLoop2" xml:space="preserve">
+    <value>The Internet and the baby</value>
+  </data>
+  <data name="MoreBut" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="NeedName" xml:space="preserve">
+    <value>LAWS YOU NEED TO KNOW</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>news</value>
+  </data>
+  <data name="NewsText" xml:space="preserve">
+    <value>Not really important news and events, but it will be useful to study them, too.</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Parents" xml:space="preserve">
+    <value>Happy Parents</value>
+  </data>
+  <data name="ReviewName1" xml:space="preserve">
+    <value>Andrey Prokaten</value>
+  </data>
+  <data name="ReviewName2" xml:space="preserve">
+    <value>Artem Kolyago</value>
+  </data>
+  <data name="ReviewName3" xml:space="preserve">
+    <value>Elizaveta Ryzhankova</value>
+  </data>
+  <data name="ReviewName4" xml:space="preserve">
+    <value>Vladik Vata</value>
+  </data>
+  <data name="ReviewName5" xml:space="preserve">
+    <value>Danil Serhyn</value>
+  </data>
+  <data name="Reviews" xml:space="preserve">
+    <value>Reviews</value>
+  </data>
+  <data name="ReviewSex1" xml:space="preserve">
+    <value>Father</value>
+  </data>
+  <data name="ReviewSex2" xml:space="preserve">
+    <value>Mother</value>
+  </data>
+  <data name="ReviewText" xml:space="preserve">
+    <value>Here is feedback from people who wanted to speak out about the work of our team, we take into account all the wishes and criticisms, so feel free to write all what you think.</value>
+  </data>
+  <data name="ReviewText1" xml:space="preserve">
+    <value>Good team and great website. It was time to tell my son about his rights and this site helped us a lot. Thank you!</value>
+  </data>
+  <data name="ReviewText2" xml:space="preserve">
+    <value>A lot of useful information, but the site certainly could have been made better. Sometimes the piling up of text makes one's eyes diverge. In general the site is very helpful with children and their rights, I recommend it.</value>
+  </data>
+  <data name="ReviewText3" xml:space="preserve">
+    <value>My daughter showed me this site when I forbade her to go and visit the boy. Honestly, I wouldn't have figured out how and what here by myself, but my daughter revealed her rights to me herself and I rethought my attitude to it, thank you!</value>
+  </data>
+  <data name="ReviewText4" xml:space="preserve">
+    <value>The site is not very clear.</value>
+  </data>
+  <data name="ReviewText5" xml:space="preserve">
+    <value>Very informative and everything is clear, even my son who is only 6 figured it all out. The games are very interesting, thanks to the team for such a great site!</value>
+  </data>
+  <data name="Rights" xml:space="preserve">
+    <value>Rights of the child</value>
+  </data>
+  <data name="Socio" xml:space="preserve">
+    <value>Socio-economic, cultural rights of minors, young people</value>
+  </data>
+  <data name="WelcomeLaw" xml:space="preserve">
+    <value>Welcome to our "Law Library"</value>
+  </data>
+  <data name="working" xml:space="preserve">
+    <value>of working</value>
+  </data>
+  <data name="WorkingText" xml:space="preserve">
+    <value>During this time we have computed some modest statistics about our successes!</value>
+  </data>
+</root>

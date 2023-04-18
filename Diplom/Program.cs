@@ -3,8 +3,12 @@ using Diplom.Domain.Repositories.Abstract;
 using Diplom.Domain.Repositories.EF;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Globalization;
+using System.Web.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +24,19 @@ builder.Services.AddTransient<DataManager>();
 
 var connection = @"Server=(localdb)\mssqllocaldb;Database=Diplom;Trusted_Connection=True;";
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connection));
-
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[]
+        {
+        new CultureInfo("en"),
+        new CultureInfo("ru")
+        };
+    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("ru");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures= supportedCultures;
+});
+builder.Services.AddMvc().AddViewLocalization().AddDataAnnotationsLocalization();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -36,11 +52,19 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+using(var scope = app.Services.CreateScope())
+{
+    var services =scope.ServiceProvider;
+    var localizationOptions = services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value;
+    app.UseRequestLocalization(localizationOptions);
+}
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{lang=ru}/{id?}");
+
 
 
 

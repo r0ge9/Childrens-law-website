@@ -1,6 +1,12 @@
-﻿@model IQueryable<Event>
+﻿@page
+@*@inject IStringLocalizer<Index> localizer
+@inject IHtmlLocalizer<Index> htmlLocalizer*@
+@*@inject IViewLocalizer viewLocalizer*@
+@model IQueryable<Event>
 @{
 	@using Diplom.Service
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
 	int size = Model.Count();
 }
 
@@ -12,7 +18,7 @@
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
 				<div class="col-md-8 text-center ftco-animate">
-					<h1 class="mb-4">Права и обязанности <span>детей</span></h1>
+					<h1 class="mb-4">geggegeg <span></span></h1>
 					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
 				</div>
 			</div>
@@ -397,7 +403,7 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>сайт не очень ничего не понятно</p>
+					<p>Сайт не очень ничего не понятно</p>
 					<p class="name">владик вата</p>
 					<span class="position">Отец</span>
 				  </div>

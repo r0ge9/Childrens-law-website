@@ -3,7 +3,10 @@ using Diplom.Domain.Entities;
 using Diplom.Models;
 using Diplom.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Localization;
 
 namespace Diplom.Controllers
 {
@@ -11,13 +14,17 @@ namespace Diplom.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly DataManager dataManager;
+        private readonly IHtmlLocalizer<HomeController> localizer;
 
-        public HomeController(ILogger<HomeController> logger,DataManager dataManager)
+        public string CurrentLangCode {  get; protected set; }
+        public HomeController(ILogger<HomeController> logger,DataManager dataManager, IHtmlLocalizer<HomeController> localizer)
         {
             _logger = logger;
             this.dataManager = dataManager;
+            this.localizer=localizer;
         }
 
+        
         public IActionResult Index()
         {
             return View(dataManager.Events.GetEvents());
