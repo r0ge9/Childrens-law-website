@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Models\ViewComponents\" />
-    <Folder Include="Resources\Pages\" />
     <Folder Include="Views\News\" />
     <Folder Include="wwwroot\js\" />
     <Folder Include="wwwroot\sass\" />
@@ -99,6 +98,12 @@
     <Resource Include="wwwroot\images\bg_2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\Home\Index.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

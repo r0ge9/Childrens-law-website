@@ -7,6 +7,7 @@ using Microsoft.Extensions.Localization;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Localization;
+using Microsoft.AspNetCore.Localization;
 
 namespace Diplom.Controllers
 {
@@ -14,14 +15,14 @@ namespace Diplom.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly DataManager dataManager;
-        private readonly IHtmlLocalizer<HomeController> localizer;
+
 
         public string CurrentLangCode {  get; protected set; }
-        public HomeController(ILogger<HomeController> logger,DataManager dataManager, IHtmlLocalizer<HomeController> localizer)
+        public HomeController(ILogger<HomeController> logger,DataManager dataManager)
         {
             _logger = logger;
             this.dataManager = dataManager;
-            this.localizer=localizer;
+
         }
 
         
@@ -29,8 +30,18 @@ namespace Diplom.Controllers
         {
             return View(dataManager.Events.GetEvents());
         }
+		[HttpPost]
+		public IActionResult SetLanguage(string culture, string returnUrl)
+		{
+			Response.Cookies.Append(
+				CookieRequestCultureProvider.DefaultCookieName,
+				CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+				new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+			);
 
-        public IActionResult About()
+			return LocalRedirect(returnUrl);
+		}
+		public IActionResult About()
         {
             return View();
         }

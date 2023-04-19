@@ -1,11 +1,30 @@
-﻿<div class="py-2 bg-primary">
+﻿@inject IViewLocalizer viewLocalizer
+@inject IOptions<RequestLocalizationOptions> LocOptions
+@{
+
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+}
+ 
+@{
+    // получаем сервис IRequestCultureFeature
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    // получаем список поддерживаемых культур
+    var cultureItems = LocOptions.Value.SupportedUICultures
+        .Select(c => new SelectListItem { Value = c.Name, Text = c.NativeName })
+        .ToList();
+}
+<div class="py-2 bg-primary">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-lg-12 d-block">
                     <div class="row d-flex">
                         <div class="col-md-5 pr-4 d-flex topper align-items-center">
                             <div class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                            <span class="text">г. Минск, Неманская 45</span>
+                            <span class="text">@viewLocalizer["Place"]</span>
                         </div>
                         <div class="col-md pr-4 d-flex topper align-items-center">
                             <div class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
@@ -22,20 +41,27 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
         <div class="container d-flex align-items-center">
-            <a class="navbar-brand" href="/Home/Index">Детский правовой сайт</a>
+            <a class="navbar-brand" href="/Home/Index">@viewLocalizer["SiteName"]</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
           </button>
           <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="Home/Index" class="nav-link pl-0">Главная</a></li>
-                <li class="nav-item"><a href="/Library/Library" class="nav-link">Правовая библиотека</a></li>
-                <li class="nav-item"><a href="/AdminTests/AdminTests" class="nav-link">Игры</a></li>
-                <li class="nav-item"><a href="/Home/News" class="nav-link">Новости</a></li>
-                <li class="nav-item"><a href="/Home/Reviews" class="nav-link">Отзывы</a></li>
-                <li class="nav-item"><a href="/Home/About" class="nav-link">О нас</a></li>
-              <li class="nav-item"><a href="/Home/Contact" class="nav-link">Контакты</a></li>
+                <li class="nav-item active"><a href="/Home/Index" class="nav-link pl-0">@viewLocalizer["Home"]</a></li>
+                <li class="nav-item"><a href="/Library/Library" class="nav-link">@viewLocalizer["Library"]</a></li>
+                <li class="nav-item"><a href="/AdminTests/AdminTests" class="nav-link">@viewLocalizer["Games"]</a></li>
+                <li class="nav-item"><a href="/Home/News" class="nav-link">@viewLocalizer["Events"]</a></li>
+                <li class="nav-item"><a href="/Home/Reviews" class="nav-link">@viewLocalizer["Reviews"]</a></li>
+                <li class="nav-item"><a href="/Home/About" class="nav-link">@viewLocalizer["About"]</a></li>
+              <li class="nav-item"><a href="/Home/Contact" class="nav-link">@viewLocalizer["Contacts"]</a></li>
             </ul>
+            <form asp-controller="Home" asp-action="SetLanguage" style="margin-top:3px"
+      asp-route-returnUrl="@Context.Request.Path"
+      method="post" class="form-horizontal">
+     <select name="culture" onchange="this.form.submit()"
+                                    asp-for="@requestCulture.RequestCulture.UICulture.Name"
+                                    asp-items="cultureItems"></select>
+</form>
           </div>
         </div>
       </nav>

@@ -1,12 +1,12 @@
-﻿@page
-@*@inject IStringLocalizer<Index> localizer
-@inject IHtmlLocalizer<Index> htmlLocalizer*@
-@*@inject IViewLocalizer viewLocalizer*@
+﻿
+
+@inject IViewLocalizer viewLocalizer
 @model IQueryable<Event>
 @{
 	@using Diplom.Service
 @using Microsoft.AspNetCore.Mvc.Localization;
 @using Microsoft.Extensions.Localization;
+
 	int size = Model.Count();
 }
 
@@ -18,8 +18,8 @@
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
 				<div class="col-md-8 text-center ftco-animate">
-					<h1 class="mb-4">geggegeg <span></span></h1>
-					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
+					<h1 class="mb-4">@viewLocalizer["MainLoop"] <span></span></h1>
+					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">@viewLocalizer["MoreBut"]</a></p>
 				</div>
 			</div>
 		</div>
@@ -30,8 +30,8 @@
 		<div class="container">
 			<div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
 				<div class="col-md-8 text-center ftco-animate">
-					<h1 class="mb-4">Интернет и<span> ребенок</span></h1>
-					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">Узнать больше</a></p>
+					<h1 class="mb-4">@viewLocalizer["MainLoop2"]<span></span></h1>
+					<p><a href="#" class="btn btn-secondary px-4 py-3 mt-3">@viewLocalizer["MoreBut"]</a></p>
 				</div>
 			</div>
 		</div>
@@ -47,8 +47,8 @@
 						<span class="flaticon-teacher"></span>
 					</div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Детям и подросткам</h3>
-						<p>В этом разделе вы узнаете много полезной информаций для жизни в школьной среде, а так же и в повседневной.</p>
+						<h3 class="heading">@viewLocalizer["BoxName1"]</h3>
+						<p>@viewLocalizer["BoxText1"]</p>
 					</div>
 				</div>      
 			</div>
@@ -58,8 +58,8 @@
 						<span class="flaticon-reading"></span>
 					</div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Родителям</h3>
-						<p>В этом разделе родители могут ознакомиться с правами ребенка, как првильно его воспитывать и как помочь своему ребенку в трудных ситуациях.</p>
+						<h3 class="heading">@viewLocalizer["BoxName2"]</h3>
+						<p>@viewLocalizer["BoxText2"]</p>
 					</div>
 				</div>    
 			</div>
@@ -69,8 +69,8 @@
 						<span class="flaticon-books"></span>
 					</div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">Учителям</h3>
-						<p>Раздел будет полезен для учителей, тут вы сможете узнать мнения экспертов о эффективных моделях преподования, как помочь ребенку при унижениях в школе и т.д.</p>
+						<h3 class="heading">@viewLocalizer["BoxName3"]</h3>
+						<p>@viewLocalizer["BoxText3"]</p>
 					</div>
 				</div>      
 			</div>
@@ -80,8 +80,8 @@
 						<span class="flaticon-diploma"></span>
 					</div>
 					<div class="media-body p-2 mt-3">
-						<h3 class="heading">О проекте</h3>
-						<p>В этом разделе вы узнаете больше о нашем проекте, его разработчиках и о экспертах которые предоставляют всю информацию.</p>
+						<h3 class="heading">@viewLocalizer["BoxName4"]</h3>
+						<p>@viewLocalizer["BoxText4"]</p>
 					</div>
 				</div>      
 			</div>
@@ -94,19 +94,19 @@
 		<div class="row">
 			<div class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light">
 				<div class="text px-4 ftco-animate">
-					<h2 class="mb-4">Добро пожаловать в нашу "Правовую библиотеку"</h2>
-					<p>Тут ты узнаешь про все эти разделы более подробно и понятно. Не пугайся этих умных слов, наша команда сделала все просто для маленьких и не самых - если хочешь узнать больше, то жми на кнопку.</p>
-					<p><a href="#" class="btn btn-secondary px-4 py-3">Перейти в библиотеку</a></p>
+					<h2 class="mb-4">@viewLocalizer["WelcomeLaw"]</h2>
+					<p>@viewLocalizer["LawText"]</p>
+					<p><a href="#" class="btn btn-secondary px-4 py-3">@viewLocalizer["LawBut"]</a></p>
 				</div>
 			</div>
 			<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-				<h2 class="mb-4">ЗАКОНЫ КОТОРЫЕ ТЕБЕ НУЖНО ЗНАТЬ</h2>
+				<h2 class="mb-4">@viewLocalizer["NeedName"]</h2>
 				<div class="row mt-5">
 					<div class="col-lg-6">
 						<div class="services-2 d-flex">
 							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
 							<div class="text">
-								<h3>Основы конституционного строя</h3>
+								<h3>@viewLocalizer["Fundamentals"]</h3>
 
 							</div>
 						</div>
@@ -115,7 +115,7 @@
 						<div class="services-2 d-flex">
 							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
 							<div class="text">
-								<h3>Гражданство, место жительства, выезд за пределы Республики Беларусь, имя ребенка</h3>
+								<h3>@viewLocalizer["Citizen"]</h3>
 
 							</div>
 						</div>
@@ -124,7 +124,7 @@
 						<div class="services-2 d-flex">
 							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 							<div class="text">
-								<h3>Права ребенка</h3>
+								<h3>@viewLocalizer["Rights"]</h3>
 
 							</div>
 						</div>
@@ -133,7 +133,7 @@
 						<div class="services-2 d-flex">
 							<div class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 							<div class="text">
-								<h3>Социально-экономические, культурные права несовершеннолетних, молодёжи</h3>
+								<h3>@viewLocalizer["Socio"]</h3>
 
 							</div>
 						</div>
@@ -151,11 +151,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<h2>Познавательные игры ждут тебя</h2>
-				<p class="mb-0">Думаешь уже достаточно знаешь о правах и обязанностях? Тогда сыграй в игры которые мы для тебя приготовили и проверь себя!</p>
+				<h2>@viewLocalizer["GamesWelcome"]</h2>
+				<p class="mb-0">@viewLocalizer["GamesText"]</p>
 			</div>
 			<div class="col-md-3 d-flex align-items-center">
-				<p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">Я готов!</a></p>
+				<p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">@viewLocalizer["GamesBut"]</a></p>
 			</div>
 		</div>
 	</div>
@@ -259,8 +259,8 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-2">
 			<div class="col-md-8 text-center heading-section ftco-animate">
-				<h2 class="mb-4"><span>Важные</span> События</h2>
-				<p>Здесь расположены самые важные новости и события твоего маленького и не очень мира, следи за этим разделом - тут много чего полезного!</p>
+				<h2 class="mb-4"><span>@viewLocalizer["Important"]</span> @viewLocalizer["Events"]</h2>
+				<p>@viewLocalizer["EventsText"]</p>
 			</div>
 		</div>	
 
@@ -293,8 +293,8 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 		  <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">
-			<h2 class="mb-4"><span>5 лет</span> работы</h2>
-			<p>За это время мы высчитали некоторую скромную статистику о наших успехах!</p>
+			<h2 class="mb-4"><span>@viewLocalizer["five"]</span> @viewLocalizer["working"]</h2>
+			<p>@viewLocalizer["WorkingText"]</p>
 		  </div>
 		</div>	
 			<div class="row d-md-flex align-items-center justify-content-center">
@@ -305,7 +305,7 @@
 						<div class="icon"><span class="flaticon-doctor"></span></div>
 					  <div class="text">
 						<strong class="number" data-number="18">0</strong>
-						<span>Награды</span>
+						<span>@viewLocalizer["Awards"]</span>
 					  </div>
 					</div>
 				  </div>
@@ -314,7 +314,7 @@
 						<div class="icon"><span class="flaticon-doctor"></span></div>
 					  <div class="text">
 						<strong class="number" data-number="351">0</strong>
-						<span>Дети которым мы помогли</span>
+						<span>@viewLocalizer["Childrens"]</span>
 					  </div>
 					</div>
 				  </div>
@@ -323,7 +323,7 @@
 						<div class="icon"><span class="flaticon-doctor"></span></div>
 					  <div class="text">
 						<strong class="number" data-number="564">0</strong>
-						<span>Счастливые родители</span>
+						<span>@viewLocalizer["Parents"]</span>
 					  </div>
 					</div>
 				  </div>
@@ -332,7 +332,7 @@
 						<div class="icon"><span class="flaticon-doctor"></span></div>
 					  <div class="text">
 						<strong class="number" data-number="300">0</strong>
-						<span>Положительных отзывов</span>
+						<span>@viewLocalizer["Feedback"]</span>
 					  </div>
 					</div>
 				  </div>
@@ -346,7 +346,7 @@
 	  <div class="container">
 		<div class="row justify-content-center mb-5 pb-2">
 		  <div class="col-md-8 text-center heading-section ftco-animate">
-			<h2 class="mb-4"><span>Отзывы</span> о нас</h2>
+			<h2 class="mb-4"><span>@viewLocalizer["Reviews"]</span> @viewLocalizer["AboutUs"]</h2>
 			<p>Здесь находятся отзывы людей, которые захотели высказаться о работе нашей команды, мы учитываем все пожелания и критику, так что не стесняйтесь и пишите все что думаете.</p>
 		  </div>
 		</div>
@@ -361,9 +361,9 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>Хорошая команда и отличный сайт. Пришло время рассказать моему сыну о своих правах и этот сайт очень помог нам. Спасибо вам!</p>
-					<p class="name">Андрей Прокатень</p>
-					<span class="position">Отец</span>
+					<p>@viewLocalizer["ReviewText1"]</p>
+					<p class="name">@viewLocalizer["ReviewName1"]</p>
+					<span class="position">@viewLocalizer["ReviewSex1"]</span>
 				  </div>
 				</div>
 			  </div>
@@ -375,9 +375,9 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>Много полезной информаций, но сайт конечно можно было сделать и получше. Иногда от нагромождения текста глаза разбегаются. В целом сайт очень помог с детьми и их правами, рекомендую.</p>
-					<p class="name">Артем Коляго</p>
-					<span class="position">Отец</span>
+					<p>@viewLocalizer["ReviewText2"]</p>
+					<p class="name">@viewLocalizer["ReviewName2"]</p>
+					<span class="position">@viewLocalizer["ReviewSex1"]</span>
 				  </div>
 				</div>
 			  </div>
@@ -389,9 +389,9 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>Дочь показала мне этот сайт, когда я запретила ей идти в гости к мальчику. Честно, я бы одна не разобралась как тут и что, но дочь сама мне открыла ее права и я переосмыслила свое отношение к этому, спасибо вам!</p>
-					<p class="name">Елизавета Рыжанкова</p>
-					<span class="position">Мать</span>
+					<p>@viewLocalizer["ReviewText3"]</p>
+					<p class="name">@viewLocalizer["ReviewName3"]</p>
+					<span class="position">@viewLocalizer["ReviewSex2"]</span>
 				  </div>
 				</div>
 			  </div>
@@ -403,9 +403,9 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>Сайт не очень ничего не понятно</p>
-					<p class="name">владик вата</p>
-					<span class="position">Отец</span>
+					<p>@viewLocalizer["ReviewText4"]</p>
+					<p class="name">@viewLocalizer["ReviewName4"]</p>
+					<span class="position">@viewLocalizer["ReviewSex1"]</span>
 				  </div>
 				</div>
 			  </div>
@@ -417,9 +417,9 @@
 					  <span class="quote d-flex align-items-center justify-content-center">
 					  <i class="icon-quote-left"></i>
 					</span>
-					<p>Очень информативно и все понятно, даже мой сын которому только 6 разобрался во всем. Игры очень интересные, спасибо команде за такой замечательный сайт!</p>
-					<p class="name">Даниил Сергун</p>
-					<span class="position">Отец</span>
+					<p>@viewLocalizer["ReviewText5"]</p>
+					<p class="name">@viewLocalizer["ReviewName5"]</p>
+					<span class="position">@viewLocalizer["ReviewSex1"]</span>
 				  </div>
 				</div>
 			  </div>
@@ -546,8 +546,8 @@
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-2">
 		  <div class="col-md-8 text-center heading-section ftco-animate">
-			<h2 class="mb-4"><span>Другие</span> новости</h2>
-			<p>Не совсем важные нвоости и событие, но их тоже полезно будет изучить.</p>
+			<h2 class="mb-4"><span>@viewLocalizer["Other"]</span> @viewLocalizer["News"]</h2>
+			<p>@viewLocalizer["NewsText"]</p>
 		  </div>
 		</div>
 				<div class="row">

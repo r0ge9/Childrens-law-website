@@ -168,6 +168,9 @@
   <data name="Fundamentals" xml:space="preserve">
     <value>Fundamentals of the constitutional order</value>
   </data>
+  <data name="GamesBut" xml:space="preserve">
+    <value>I'm ready!</value>
+  </data>
   <data name="GamesText" xml:space="preserve">
     <value>You think you know enough about rights and responsibilities? Then play the games we have prepared for you and test yourself!</value>
   </data>

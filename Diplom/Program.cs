@@ -16,15 +16,19 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddControllersWithViews().SetCompatibilityVersion(version: CompatibilityVersion
     .Version_3_0).AddSessionStateTempDataProvider();
+
 builder.Services.AddTransient<ITestRepository, EFTestRepository>();
 builder.Services.AddTransient<IReviewRepository, EFReviewRepository>();
 builder.Services.AddTransient<IEventRepository, EFEventRepository>();
 builder.Services.AddTransient<IQuestionRepository, EFQuestionRepository>();
 builder.Services.AddTransient<DataManager>();
 
-var connection = @"Server=(localdb)\mssqllocaldb;Database=Diplom;Trusted_Connection=True;";
+var connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Diplom;AttachDbFilename=|DataDirectory|\\Data\\Diplom.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(connection));
 builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddControllersWithViews().
+    AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix).
+	AddDataAnnotationsLocalization();
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
@@ -63,7 +67,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{lang=ru}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
 

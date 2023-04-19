@@ -5,15 +5,22 @@
     var id = rand.Next(4, Model.Count());
     var list = Model.ToList();
 }*@
+@inject IViewLocalizer viewLocalizer
+
+@{
+
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+}
 <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2">Контакты</h2>
+                <h2 class="ftco-heading-2">@viewLocalizer["Contacts"]</h2>
                 <div class="block-23 mb-3">
                   <ul>
-                    <li><span class="icon icon-map-marker"></span><span class="text">Республика Беларусь, г.Минск, Неманская 45</span></li>
+                    <li><span class="icon icon-map-marker"></span><span class="text">@viewLocalizer["Place"]</span></li>
                     <li><a href="#"><span class="icon icon-phone"></span><span class="text">+375-44-563-79-31</span></a></li>
                     <li><a href="#"><span class="icon icon-envelope"></span><span class="text">egor.ivanovBYM@gmail.com</span></a></li>
                   </ul>
@@ -52,29 +59,30 @@
           </div>*@
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Ссылки</h2>
+              <h2 class="ftco-heading-2">@viewLocalizer["Links"]</h2>
               <ul class="list-unstyled">
-                <li><a href="/Home/Index"><span class="ion-ios-arrow-round-forward mr-2"></span>Главная</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Правовая библиотека</a></li>
-                <li><a href=""><span class="ion-ios-arrow-round-forward mr-2"></span>Игры</a></li>
-                <li><a href="/Home/News"><span class="ion-ios-arrow-round-forward mr-2"></span>Новости</a></li>
-                <li><a href="/Review//s/Reviews"><span class="ion-ios-arrow-round-forward mr-2"></span>Отзывы</a></li>
-                <li><a href="/Home/About"><span class="ion-ios-arrow-round-forward mr-2"></span>О нас</a></li>
+                <li><a href="/Home/Index"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["Home"]</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["Library"]</a></li>
+                <li><a href=""><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["Games"]</a></li>
+                <li><a href="/Home/News"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["Events"]</a></li>
+                <li><a href="/Review/Reviews"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["Reviews"]</a></li>
+                <li><a href="/Home/About"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["About"]</a></li>
+                <li><a href="/Home/Contact"><span class="ion-ios-arrow-round-forward mr-2"></span>@viewLocalizer["ContactsL"]</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2">Подпишись на новости!</h2>
+                <h2 class="ftco-heading-2">@viewLocalizer["Subscribe"]</h2>
               <form action="#" class="subscribe-form">
                 <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="Введите адрес электронной почты">
-                  <input type="submit" value="Подписаться" class="form-control submit px-3">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="@viewLocalizer["TextField"]">
+                  <input type="submit" value="@viewLocalizer["SubscribeBut"]" class="form-control submit px-3">
                 </div>
               </form>
             </div>
             <div class="ftco-footer-widget mb-5">
-                <h2 class="ftco-heading-2 mb-0">Свяжитесь с нами</h2>
+                <h2 class="ftco-heading-2 mb-0">@viewLocalizer["ContactUs"]</h2>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -87,7 +95,7 @@
           <div class="col-md-12 text-center">
 
             <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Все права защищены | Разработка сайта: <i class="icon-heart" aria-hidden="true"></i><a href="https://github.com/r0ge9" target="_blank"> Egor Ivanov</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> @viewLocalizer["Developer"] <i class="icon-heart" aria-hidden="true"></i><a href="https://github.com/r0ge9" target="_blank"> Egor Ivanov</a>
   </p>
           </div>
         </div>
