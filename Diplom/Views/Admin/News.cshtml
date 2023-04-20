@@ -1,15 +1,19 @@
 @model IQueryable<Event>
     @{
         @using Diplom.Service
+        @using Diplom.Domain.Entities
+        @using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
     }
+    @inject IViewLocalizer localizer
 
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Админ-Панель</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Новости <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">@localizer["Panel"]</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">@localizer["AdminHome"] <i class="ion-ios-arrow-forward"></i></a></span> <span>@localizer["News"] <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -53,10 +57,10 @@
                                 <a href="#" class="mr-2">@entity.Publisher</a>
                                 <form id="form-@entity.Id" asp-action="DeleteEvent" asp-controller="Admin" method="post">
                                 <input type="hidden" name="id" value="@entity.Id">
-                                                <a href="#" class="mr-2" onclick="document.getElementById('form-@entity.Id').submit()" >Удалить</a>
+                                                <a href="#" class="mr-2" onclick="document.getElementById('form-@entity.Id').submit()" >@localizer["DeleteBut"]</a>
                                                 
                                 </form>
-                                          <a asp-controller="Admin" asp-action="EditEvent" asp-route-id="@entity.Id" class="mr-2">Редактировать</a>
+                                          <a asp-controller="Admin" asp-action="EditEvent" asp-route-id="@entity.Id" class="mr-2">@localizer["ChangeBut"]</a>
                             </p>
                         </div>
                       </div>
@@ -67,10 +71,10 @@
                         <div class="pricing-entry bg-light pb-4 text-center">
                             <div>
 
-                                <p><span class="price">Создайте еще одну новость!</span> </p>
+                                <p><span class="price">@localizer["Create"]</span> </p>
                             </div>
 
-                            <p class="button text-center"><a asp-controller="Admin" asp-action="EditEvent"  class="btn btn-primary px-4 py-3">Создать</a></p>
+                            <p class="button text-center"><a asp-controller="Admin" asp-action="EditEvent"  class="btn btn-primary px-4 py-3">@localizer["CreateBut"]</a></p>
                             </div>
                 </div>
             }
@@ -80,10 +84,10 @@
                         <div class="pricing-entry bg-light pb-4 text-center">
                             <div>
 
-                                <p><span class="price">Новостей нет, создайте первую!</span> </p>
+                                <p><span class="price">@localizer["NoNews"]</span> </p>
                             </div>
 
-                            <p class="button text-center"><a asp-controller="Admin" asp-action="EditTest"  class="btn btn-primary px-4 py-3">Создать</a></p>
+                            <p class="button text-center"><a asp-controller="Admin" asp-action="EditTest"  class="btn btn-primary px-4 py-3">@localizer["CreateBut"]</a></p>
                             </div>
                             </div>
             }

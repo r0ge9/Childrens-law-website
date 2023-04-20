@@ -117,52 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About us</value>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
   </data>
-  <data name="AdminEnter" xml:space="preserve">
-    <value>For developers</value>
+  <data name="DateRequired" xml:space="preserve">
+    <value>Date is required</value>
   </data>
-  <data name="Contacts" xml:space="preserve">
-    <value>Contacts</value>
+  <data name="Image" xml:space="preserve">
+    <value>Image (Link)</value>
   </data>
-  <data name="ContactsL" xml:space="preserve">
-    <value>Contacts</value>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>Contact Us</value>
+  <data name="NameLength" xml:space="preserve">
+    <value>Length of the name must be less then 50 symbols</value>
   </data>
-  <data name="Developer" xml:space="preserve">
-    <value>All rights reserved | Website development:</value>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Name is required</value>
   </data>
-  <data name="Events" xml:space="preserve">
-    <value>Events</value>
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher</value>
   </data>
-  <data name="Games" xml:space="preserve">
-    <value>Games</value>
+  <data name="PublisherRequired" xml:space="preserve">
+    <value>Author is required</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
   </data>
-  <data name="Library" xml:space="preserve">
-    <value>Law Library</value>
+  <data name="TextLength" xml:space="preserve">
+    <value>The text must have a minimum length of 50 characters and a maximum of 1000 characters</value>
   </data>
-  <data name="Links" xml:space="preserve">
-    <value>Links</value>
-  </data>
-  <data name="Place" xml:space="preserve">
-    <value>Republic of Belarus, Minsk, Nemanskaya 45</value>
-  </data>
-  <data name="Reviews" xml:space="preserve">
-    <value>Reviews</value>
-  </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>Subscribe to the news!</value>
-  </data>
-  <data name="SubscribeBut" xml:space="preserve">
-    <value>Subscribe</value>
-  </data>
-  <data name="TextField" xml:space="preserve">
-    <value>Enter your email address</value>
+  <data name="TextRequired" xml:space="preserve">
+    <value>Text is required</value>
   </data>
 </root>

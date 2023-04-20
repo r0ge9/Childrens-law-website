@@ -1,12 +1,13 @@
-
-    
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+    @inject IViewLocalizer localizer
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Свяжитесь с нами</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Контакты <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">@localizer["Name"]</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">@localizer["Home"] <i class="ion-ios-arrow-forward"></i></a></span> <span>@localizer["Contact"] <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -17,19 +18,19 @@
         <div class="row d-flex mb-5 contact-info">
           <div class="col-md-3 d-flex">
           	<div class="bg-light align-self-stretch box p-4 text-center">
-          		<h3 class="mb-4">Адрес</h3>
-	            <p>Республика Беларусь, г.Минск, Неманска 45</p>
+          		<h3 class="mb-4">@localizer["Address"]</h3>
+	            <p>@localizer["AddressText"]</p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light align-self-stretch box p-4 text-center">
-          		<h3 class="mb-4">Номер телефона</h3>
+          		<h3 class="mb-4">@localizer["Phone"]</h3>
 	            <p><a href="tel://1234567920">+375-44-563-79-31</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="bg-light align-self-stretch box p-4 text-center">
-          		<h3 class="mb-4">Электронная почта</h3>
+          		<h3 class="mb-4">@localizer["Email"]</h3>
 	            <p><a href="mailto:info@yoursite.com">egor.ivanovBYM@gmail.com</a></p>
 	          </div>
           </div>
@@ -44,19 +45,19 @@
 					<div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
 						<form action="#">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Имя">
+                <input type="text" class="form-control" placeholder="@localizer["NameField"]">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Почта">
+                <input type="text" class="form-control" placeholder="@localizer["Email"]">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Тема">
+                <input type="text" class="form-control" placeholder="@localizer["Theme"]">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Сообщение"></textarea>
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="@localizer["Message"]"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Отправить" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="@localizer["Send"]" class="btn btn-primary py-3 px-5">
               </div>
             </form>
 					</div>

@@ -9595,6 +9595,94 @@ textarea.form-control {
       color: #000000;
       font-style: italic; }
 
+.AuthBlock {
+    align-items: center;
+    display: flex;
+    margin: 100px auto;
+    background-size: 100%;
+}
+
+.AuthForm h1 {
+    margin: 20px auto;
+}
+
+.AuthForm {
+    margin: 0 auto;
+}
+
+.login {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px 0;
+}
+
+.logLabel {
+    color: #363636;
+}
+
+.checkBox {
+    display: flex;
+}
+
+.check {
+    margin-right: 20px;
+}
+
+.Enter {
+    width: 150px;
+    margin: 10px auto;
+    background: linear-gradient( to right, #47bfff 5%, #1a44c2 60%);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+    .Enter:hover {
+        background-color: #9bdcff;
+        transform: scale(1.2);
+    }
+
+.loginField {
+    max-width: 300px;
+    background: #32353C;
+    border-radius: 3px;
+    color: #E9E9E9;
+    padding: 8px 6px;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+    transition: border ease-in-out .5s;
+    border: 1px solid #26282D;
+    outline: none;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+
+.passwordField {
+    max-width: 300px;
+    background: #32353C;
+    border-radius: 3px;
+    color: #E9E9E9;
+    padding: 8px 6px;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+    transition: border ease-in-out .5s;
+    border: 1px solid #26282D;
+    outline: none;
+    font-family: "Motiva Sans", Sans-serif;
+    font-weight: normal;
+}
+
+.forgotPass {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}
 #ftco-loader {
   position: fixed;
   width: 96px;

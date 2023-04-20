@@ -1,9 +1,11 @@
 ﻿using Diplom.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Diplom.Domain
 {
-	public class AppDbContext:DbContext
+	public class AppDbContext:IdentityDbContext<IdentityUser>
 	{
 		public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
 		{ Database.EnsureCreated(); }
@@ -30,5 +32,6 @@ namespace Diplom.Domain
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<Test> Tests { get; set; }
 		public DbSet<Question> Questions { get; set; }
-	}
+        public DbSet<Admin> Admins { get; set; }
+    }
 }

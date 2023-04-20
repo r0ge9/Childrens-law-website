@@ -1,13 +1,16 @@
 @model Event
-	  
-    
+	@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization 
+        @using Diplom.Domain.Entities
+
+@inject IViewLocalizer localizer    
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Админ-панель</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">Админ-главная <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a href="/Admin/News">Новости <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a >Изменение новости<i class="ion-ios-arrow-forward"></i></a></span></p>
+            <h1 class="mb-2 bread">@localizer["Panel"]</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Admin/Admin">@localizer["AdminHome"] <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a href="/Admin/News">@localizer["News"] <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"> <a >@localizer["NewsChange"]<i class="ion-ios-arrow-forward"></i></a></span></p>
           </div>
         </div>
       </div>
@@ -21,27 +24,27 @@
 						<form asp-controller="Admin" asp-action="EditEvent" method="post">
                             <input type="hidden" asp-for="Id" />
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Название" asp-for="Name">
+                <input type="text" class="form-control" placeholder="@localizer["Name"]" asp-for="Name">
                 <span asp-validation-for="Name"></span>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Дата" asp-for="Date">
+                <input type="text" class="form-control" placeholder="@localizer["Date"]" asp-for="Date">
                 <span asp-validation-for="Date"></span>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Издатель" asp-for="Publisher">
+                <input type="text" class="form-control" placeholder="@localizer["Publisher"]" asp-for="Publisher">
                 <span asp-validation-for="Publisher"></span>
               </div>
               <div class="form-group">
-                <textarea name="Text" id="" cols="50" rows="10" class="form-control" placeholder="Текст новости" asp-for="Text"></textarea>
+                <textarea name="Text" id="" cols="50" rows="10" class="form-control" placeholder="@localizer["Text"]" asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
               </div>
               <div class="form-group">
-                 <input type="text" class="form-control" placeholder="Ссылка на фото" asp-for="Image">
+                 <input type="text" class="form-control" placeholder="@localizer["Image"]" asp-for="Image">
                 <span asp-validation-for="Image"></span>
               </div>
               <div class="form-group">
-                <input type="submit" value="Опубликовать" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="@localizer["Publish"]" class="btn btn-primary py-3 px-5">
               </div>
             </form>
 					</div>

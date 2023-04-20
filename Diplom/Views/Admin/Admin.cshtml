@@ -1,4 +1,6 @@
-
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@inject IViewLocalizer localizer
 
 
 
@@ -8,7 +10,7 @@
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center">
                     <div class="col-md-9 ftco-animate text-center">
-                        <h1 class="mb-2 bread">Админ-панель</h1>
+                        <h1 class="mb-2 bread">@localizer["Panel"]</h1>
 
                     </div>
                 </div>
@@ -18,15 +20,15 @@
         <section class="ftco-section">
             <div class="container">
 
-                <h1 align="center">Новости</h1>
+                <h1 align="center">@localizer["News"]</h1>
 
                 <div class="row">
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="pricing-entry bg-light pb-4 text-center">
                             <div>
                             </div>
-                            <p>Страница с новостоями</p>
-                            <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="News" asp-route-id="">Перейти</a></p>
+                            <p>@localizer["NewsPage"]</p>
+                            <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="News" asp-route-id="">@localizer["FollowBut"]</a></p>
                         </div>
                     </div>
                     
@@ -37,15 +39,15 @@
         <section class="ftco-section">
             <div class="container">
 
-                <h1 align="center">Тесты</h1>
+                <h1 align="center">@localizer["Tests"]</h1>
 
                 <div class="row">
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="pricing-entry bg-light pb-4 text-center">
                             <div>
                             </div>
-                            <p>Страница с тестами</p>
-                            <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="Tests" asp-route-id="">Перейти</a></p>
+                            <p>@localizer["TestsPage"]</p>
+                            <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="Tests" asp-route-id="">@localizer["FollowBut"]</a></p>
                         </div>
                     </div>
                     

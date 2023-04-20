@@ -2,8 +2,8 @@
 @inject IOptions<RequestLocalizationOptions> LocOptions
 @{
 
-@using Microsoft.AspNetCore.Mvc.Localization;
-@using Microsoft.Extensions.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
 @using Microsoft.AspNetCore.Builder
 @using Microsoft.AspNetCore.Localization
 @using Microsoft.Extensions.Options
@@ -50,8 +50,8 @@
                 <li class="nav-item active"><a href="/Home/Index" class="nav-link pl-0">@viewLocalizer["Home"]</a></li>
                 <li class="nav-item"><a href="/Library/Library" class="nav-link">@viewLocalizer["Library"]</a></li>
                 <li class="nav-item"><a href="/AdminTests/AdminTests" class="nav-link">@viewLocalizer["Games"]</a></li>
-                <li class="nav-item"><a href="/Home/News" class="nav-link">@viewLocalizer["Events"]</a></li>
-                <li class="nav-item"><a href="/Home/Reviews" class="nav-link">@viewLocalizer["Reviews"]</a></li>
+                <li class="nav-item"><a href="/News/News" class="nav-link">@viewLocalizer["Events"]</a></li>
+                <li class="nav-item"><a href="/Review/Reviews" class="nav-link">@viewLocalizer["Reviews"]</a></li>
                 <li class="nav-item"><a href="/Home/About" class="nav-link">@viewLocalizer["About"]</a></li>
               <li class="nav-item"><a href="/Home/Contact" class="nav-link">@viewLocalizer["Contacts"]</a></li>
             </ul>

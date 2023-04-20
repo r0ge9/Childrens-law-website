@@ -1,12 +1,13 @@
-
-    
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+    @inject IViewLocalizer localizer
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">О нас</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>О нас <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">@localizer["Name"]</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">@localizer["Home"] <i class="ion-ios-arrow-forward"></i></a></span> <span>@localizer["Name"] <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -17,16 +18,8 @@
 				<div class="text-about">
 					<div class="text-about">
 						<div class="text px-4 ftco-animate">
-	          	<h2 class="mb-4">О проекте</h2>
-							<p>Данный проект разработан по инициативе Колледжа Бизнеса и Права как дипломный проект для того, чтобы помочь детям и подросткам получить юридические знания, ответить на «взрослые» вопросы, дать совет в сложных ситуациях, рассказать о законодательстве Республики Беларусь и правах граждан нашей страны. Основная цель проекта – развить морально-нравственные качества ребят, сформировать у подрастающего поколения позитивный образ права как государственного института, воспитать чувство важности прав ребенка, а также последовательно выработать у них не только знания и навыки, но и ценностные установки, которые будут необходимы им для жизни и деятельности в обществе.
-
-								Для достижения поставленной цели вся правовая информация подается в увлекательной и доступной форме, в том числе через игры.
-								
-								Подсказки в поиске ответов на правовые вопросы расположены в информационной части разделов сайта «Юридическая азбука», «Правовые лабиринты», «Путешествие в прошлое», «Наше государство – Республика Беларусь» и «Полезная информация».
-								
-								На сайте есть Помощник, который поможет «Искать» ответ по ключевым словам заданного вопроса.
-								
-								</p>
+	          	<h2 class="mb-4">@localizer["Project"]</h2>
+							<p>@localizer["Text"]</p>
 							
 						</div>
 					</div>

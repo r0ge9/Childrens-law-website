@@ -1,7 +1,10 @@
 @model IQueryable<Event>
+@inject IViewLocalizer localizer
     @{
         @using Diplom.Service
         @using Diplom.Domain.Entities
+        @using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
     }
 
     <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg')">
@@ -9,8 +12,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Новости</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Новости <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">@localizer["News"]</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">@localizer["Home"] <i class="ion-ios-arrow-forward"></i></a></span> <span>@localizer["News"] <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>

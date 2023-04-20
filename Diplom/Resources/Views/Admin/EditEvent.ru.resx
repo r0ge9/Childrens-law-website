@@ -117,52 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>About us</value>
+  <data name="AdminHome" xml:space="preserve">
+    <value>Админ-главная</value>
   </data>
-  <data name="AdminEnter" xml:space="preserve">
-    <value>For developers</value>
+  <data name="Date" xml:space="preserve">
+    <value>Дата</value>
   </data>
-  <data name="Contacts" xml:space="preserve">
-    <value>Contacts</value>
+  <data name="Image" xml:space="preserve">
+    <value>Ссылка на фото</value>
   </data>
-  <data name="ContactsL" xml:space="preserve">
-    <value>Contacts</value>
+  <data name="Name" xml:space="preserve">
+    <value>Название</value>
   </data>
-  <data name="ContactUs" xml:space="preserve">
-    <value>Contact Us</value>
+  <data name="News" xml:space="preserve">
+    <value>Новости</value>
   </data>
-  <data name="Developer" xml:space="preserve">
-    <value>All rights reserved | Website development:</value>
+  <data name="NewsChange" xml:space="preserve">
+    <value>Изменение новости</value>
   </data>
-  <data name="Events" xml:space="preserve">
-    <value>Events</value>
+  <data name="Panel" xml:space="preserve">
+    <value>Админ-панель</value>
   </data>
-  <data name="Games" xml:space="preserve">
-    <value>Games</value>
+  <data name="Publish" xml:space="preserve">
+    <value>Опубликовать</value>
   </data>
-  <data name="Home" xml:space="preserve">
-    <value>Home</value>
+  <data name="Publisher" xml:space="preserve">
+    <value>Издатель</value>
   </data>
-  <data name="Library" xml:space="preserve">
-    <value>Law Library</value>
-  </data>
-  <data name="Links" xml:space="preserve">
-    <value>Links</value>
-  </data>
-  <data name="Place" xml:space="preserve">
-    <value>Republic of Belarus, Minsk, Nemanskaya 45</value>
-  </data>
-  <data name="Reviews" xml:space="preserve">
-    <value>Reviews</value>
-  </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>Subscribe to the news!</value>
-  </data>
-  <data name="SubscribeBut" xml:space="preserve">
-    <value>Subscribe</value>
-  </data>
-  <data name="TextField" xml:space="preserve">
-    <value>Enter your email address</value>
+  <data name="Text" xml:space="preserve">
+    <value>Текст новости</value>
   </data>
 </root>

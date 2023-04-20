@@ -49,35 +49,8 @@ namespace Diplom.Controllers
         {
             return View();
         }
-        public IActionResult News()
-        {
-            return View(dataManager.Events.GetEvents());
-        }
-        [HttpGet]
-		public IActionResult Reviews()
-		{
-            ViewBag.Review = new Review();
-			return View(dataManager.Reviews.GetReviews());
-		}
-		
-		[HttpGet]
-		public IActionResult AddReview()
-		{
-			ViewBag.Review = new Review();
-			return View();
-		}
-        [HttpPost]
-        public IActionResult AddReview(Review model)
-		{
-           
-            
-			if (ModelState.IsValid)
-			{
-				dataManager.Reviews.SaveReview(model);
-				return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
-			}
-			return View(model);
-		}
+        
+        
 		public IActionResult Event(int id)
         {
             return View("Event",dataManager.Events.GetEventById(id));

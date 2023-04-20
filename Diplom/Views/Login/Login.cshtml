@@ -1,0 +1,25 @@
+﻿@model Diplom.ViewModels.LoginViewModel
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+@inject IViewLocalizer localizer
+<div class="container">
+                <div class="AuthBlock">
+                    <div class="AuthForm">
+                        <form class="login"asp-area="" asp-controller="Login" asp-action="Login" method="post" asp-route-returnUrl="@ViewBag.returnUrl">
+                            <div asp-validation-summary="All">
+                                <h1>@localizer["Name"]</h1>
+                                <label for="loginField" class="logLabel">Email</label>
+                                <input type="text" class="loginField" asp-for="Email">
+                                
+                                <label for="passwordField" class="logLabel">@localizer["Password"]</label>
+                                <input type="password" class="passwordField" asp-for="Password">
+                                
+                                <button class="Enter">@localizer["Enter"]</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+
