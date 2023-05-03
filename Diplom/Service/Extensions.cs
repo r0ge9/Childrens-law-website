@@ -1,7 +1,24 @@
-﻿namespace Diplom.Service
+﻿using Diplom.Domain.Entities;
+
+namespace Diplom.Service
 {
     public static class Extensions
     {
+        private static Queue<Question> Questions;
+                
+        public static Queue<Question> questions
+        {
+            get { return Questions; }
+            set 
+            { 
+                Questions = value;
+                count = value.Count;
+            }
+        }
+
+        public static int answers = 0;
+        public static int count = 0;
+
         public static string CutController(this string str)
         {
             return str.Replace("Controller", "");
