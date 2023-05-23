@@ -17,6 +17,7 @@ namespace Diplom.Domain.Entities
 		[Required]
 		public string Image { get; set; }
 		[ForeignKey("TestId")]
+		
 		public List<Question> Questions { get; set; }
 
 	}

@@ -3,7 +3,7 @@
 	@using Diplom.Domain.Entities
 
 }
-    <section class="hero-wrap hero-wrap-2" style="background-image: url(/images/bg_2.jpg);">
+    @*<section class="hero-wrap hero-wrap-2" style="background-image: url(https://thumbs.dreamstime.com/b/%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9-%D0%BF%D0%B0%D0%BB%D0%B5%D1%86-%D0%B2%D0%B2%D0%B5%D1%80%D1%85-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D0%BC%D1%8B%D0%B5-%D0%B6%D0%B5%D1%81%D1%82%D1%8B-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-220093922.jpg);">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -13,13 +13,24 @@
           </div>
         </div>
       </div>
-    </section>
-		
+    </section>*@
+		<section class="hero-wrap hero-wrap-2" style="background-image: url(https://images.wallpaperscraft.ru/image/single/kod_tsifry_matritsa_127037_1920x1080.jpg)">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-2 bread">Наши отзывы</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Отзывы <i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
 	
 
 		<section class="ftco-section ftco-no-pb">
 			<div class="container">
-			@*	<div class="row justify-content-end">
+			@*	https://thumbs.dreamstime.com/b/%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9-%D0%BF%D0%B0%D0%BB%D0%B5%D1%86-%D0%B2%D0%B2%D0%B5%D1%80%D1%85-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D0%BC%D1%8B%D0%B5-%D0%B6%D0%B5%D1%81%D1%82%D1%8B-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-220093922.jpg
+				<div class="row justify-content-end">
 				<div class="col-md-6 py-5 px-md-5 bg-primary">
 			  <div class="heading-section heading-section-white ftco-animate mb-5">
 				<h2 class="mb-4">Оставьте отзыв!</h2>
@@ -89,7 +100,7 @@
                                 <p><span class="price">Оставьте свой отзыв!</span> </p>
                             </div>
 
-                            <p class="button text-center"><a asp-controller="Home" asp-action="AddReview"  class="btn btn-primary px-4 py-3">Оставить</a></p>
+                            <p class="button text-center"><a asp-controller="Review" asp-action="AddReview"  class="btn btn-primary px-4 py-3">Оставить</a></p>
                             </div>
                 </div>
 					

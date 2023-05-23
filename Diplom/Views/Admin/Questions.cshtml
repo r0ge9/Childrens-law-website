@@ -1,7 +1,7 @@
 ﻿@model IQueryable<Question> 
         @using Diplom.Domain.Entities
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');">
+<section class="hero-wrap hero-wrap-2" style="background-image: url(https://images.wallpaperscraft.ru/image/single/kod_tsifry_matritsa_127037_1920x1080.jpg);">
 	  <div class="overlay"></div>
 	  <div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -49,7 +49,7 @@
 								<p><span class="price">Создайте еще один вопрос!</span> </p>
 							</div>
 
-							<p class="button text-center"><a asp-controller="Admin" asp-action="EditQuestion"  class="btn btn-primary px-4 py-3">Создать</a></p>
+							<p class="button text-center"><a asp-controller="Admin" asp-action="EditQuestion" asp-route-id="0" asp-route-testId="@ViewBag.TestId"  class="btn btn-primary px-4 py-3">Создать</a></p>
 							</div>
 							</div>
 			}
@@ -62,7 +62,7 @@
 								<p><span class="price">Вопросов еще нет, создайте первый!</span> </p>
 							</div>
 
-							<p class="button text-center"><a asp-controller="Admin" asp-action="EditQuestion"  class="btn btn-primary px-4 py-3">Создать</a></p>
+							<p class="button text-center"><a asp-controller="Admin" asp-action="EditQuestion" asp-route-id="0" asp-route-testId="@ViewBag.TestId"  class="btn btn-primary px-4 py-3">Создать</a></p>
 							</div>
 							</div>
 			}

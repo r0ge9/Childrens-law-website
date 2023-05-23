@@ -14,14 +14,14 @@ namespace Diplom.Controllers
 			_logger = logger;
 			this.dataManager = dataManager;
 		}
-		[HttpGet]
+		
 		public IActionResult Reviews()
 		{
 			ViewBag.Review = new Review();
 			return View(dataManager.Reviews.GetReviews());
 		}
 
-		[HttpGet]
+		
 		public IActionResult AddReview()
 		{
 			ViewBag.Review = new Review();

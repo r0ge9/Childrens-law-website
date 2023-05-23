@@ -13,6 +13,7 @@
     <Content Remove="Views\Home\News.cshtml" />
     <Content Remove="Views\Home\Reviews.cshtml" />
     <Content Remove="Views\News\News.cshtml" />
+    <Content Remove="Views\Review\AddReview.cshtml" />
     <Content Remove="wwwroot\images\bg_2.jpg" />
   </ItemGroup>
 
@@ -34,6 +35,7 @@
     <None Include="Views\Home\Event.cshtml" />
     <None Include="Views\News\News.cshtml" />
     <None Include="Views\Home\Contact.cshtml" />
+    <None Include="Views\Review\AddReview.cshtml" />
     <None Include="Views\Review\Reviews.cshtml" />
     <None Include="wwwroot\images\.DS_Store" />
     <None Include="wwwroot\images\bg_1.jpg" />

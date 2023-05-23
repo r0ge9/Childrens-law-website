@@ -10,7 +10,23 @@
 	int size = Model.Count();
 }
 
+<head> <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet"/>
 
+    <link rel="stylesheet" href="/css/open-iconic-bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+
+    <link rel="stylesheet" href="/css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="/css/magnific-popup.css"/>
+
+    <link rel="stylesheet" href="/css/aos.css"/>
+
+    <link rel="stylesheet" href="/css/ionicons.min.css"/>
+
+    <link rel="stylesheet" href="/css/flaticon.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/style.css" asp-append-version="true"/></head>
 
 <section class="home-slider owl-carousel">
 	<div class="slider-item" style="background-image:url(/images/bg_1.jpg);">
@@ -96,7 +112,7 @@
 				<div class="text px-4 ftco-animate">
 					<h2 class="mb-4">@viewLocalizer["WelcomeLaw"]</h2>
 					<p>@viewLocalizer["LawText"]</p>
-					<p><a href="#" class="btn btn-secondary px-4 py-3">@viewLocalizer["LawBut"]</a></p>
+					<p><a href="/Library/Library" class="btn btn-secondary px-4 py-3">@viewLocalizer["LawBut"]</a></p>
 				</div>
 			</div>
 			<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
@@ -155,7 +171,7 @@
 				<p class="mb-0">@viewLocalizer["GamesText"]</p>
 			</div>
 			<div class="col-md-3 d-flex align-items-center">
-				<p class="mb-0"><a href="#" class="btn btn-secondary px-4 py-3">@viewLocalizer["GamesBut"]</a></p>
+				<p class="mb-0"><a href="/Test/Tests" class="btn btn-secondary px-4 py-3">@viewLocalizer["GamesBut"]</a></p>
 			</div>
 		</div>
 	</div>
@@ -289,7 +305,8 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: 
+url(/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 		  <div class="col-md-8 text-center heading-section heading-section-black ftco-animate">
@@ -556,7 +573,7 @@
 			}
 					@foreach(var ent in Model)
 			{
-				if (count == 4)
+				if (count == 3)
 				{
 					break;
 				}

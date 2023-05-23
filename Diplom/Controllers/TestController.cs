@@ -27,9 +27,10 @@ namespace Diplom.Controllers
             return View(Extensions.questions.Dequeue());
         }
         [HttpPost]
-        public IActionResult FirstQuestion(string right)
+        public IActionResult FirstQuestion(IFormCollection f)
         {
-            if(right!=null)
+            string val = f["q"].ToString();
+            if(val=="right")
             {
                 Extensions.answers++;
             }
@@ -37,17 +38,22 @@ namespace Diplom.Controllers
         }
         public IActionResult Questions()
         {
-            return Extensions.questions.Count!=0? View(Extensions.questions.Dequeue()):RedirectToAction("");
+            return Extensions.questions.Count!=0? View(Extensions.questions.Dequeue()):RedirectToAction("Results");
         }
         [HttpPost]
-        public IActionResult Questions(string right)
+        public IActionResult Questions(IFormCollection f)
         {
-            if (right != null)
+            string val = f["q"].ToString();
+            if (val == "right")
             {
                 Extensions.answers++;
             }
-            return Extensions.questions.Count != 0 ? View(Extensions.questions.Dequeue()) : RedirectToAction("");
+            return Extensions.questions.Count != 0 ? View(Extensions.questions.Dequeue()) : RedirectToAction("Results");
 
+        }
+        public IActionResult Results()
+        {
+            return View();
         }
     }
 }

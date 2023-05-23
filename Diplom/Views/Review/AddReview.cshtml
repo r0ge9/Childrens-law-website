@@ -1,7 +1,6 @@
-п»ї@model Review
+@model Review
 	@{
 	@using Diplom.Domain.Entities
-	@using Diplom.Service
 
 }
     <section class="hero-wrap hero-wrap-2" style="background-image: url(https://thumbs.dreamstime.com/b/%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B9-%D0%BF%D0%B0%D0%BB%D0%B5%D1%86-%D0%B2%D0%B2%D0%B5%D1%80%D1%85-%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D1%83%D0%B5%D0%BC%D1%8B%D0%B5-%D0%B6%D0%B5%D1%81%D1%82%D1%8B-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B5-220093922.jpg);">
@@ -9,39 +8,42 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Р’Р°С€ РѕС‚Р·С‹РІ</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Р“Р»Р°РІРЅР°СЏ <i class="ion-ios-arrow-forward"></i></a></span> <span>РћС‚Р·С‹РІС‹ <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">Наши отзывы</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Отзывы <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
     </section>
+		
+	
 
-    <div class="row justify-content-end">
+		<section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row justify-content-end">
 				<div class="col-md-6 py-5 px-md-5 bg-primary">
 			  <div class="heading-section heading-section-white ftco-animate mb-5">
-				<h2 class="mb-4">РћСЃС‚Р°РІСЊС‚Рµ РѕС‚Р·С‹РІ!</h2>
-				<p></p>
+				<h2 class="mb-4">Оставьте отзыв!</h2>
+				
 			  </div>
-			  <form asp-controller="Home" asp-action="AddReview" method="post" class="appointment-form ftco-animate">
+			  <form asp-controller="Review" asp-action="AddReview" method="post" class="appointment-form ftco-animate">
 						<div class="d-md-flex">
 							<div class="form-group">
-								<input type="text" class="form-control" asp-for="Name"  placeholder="РРјСЏ">
+								<input type="text" class="form-control" asp-for="@Model.Name"  placeholder="Имя">
+								<span asp-validation-for="Name"></span>
 							</div>
 							<div class="form-group ml-md-4">
-								<input type="text" class="form-control" asp-for="Image" placeholder="РЎСЃС‹Р»РєР° РЅР° С„РѕС‚Рѕ">
+								<input type="text" class="form-control" asp-for="@Model.Image" placeholder="Ссылка">
+								<span asp-validation-for="Image"></span>
 							</div>
 						</div>
 						<div class="d-md-flex">
 							<div class="form-group">
 								<div class="form-field">
 							  <div class="select-wrap">
-					  
-					 @* <select name="list" id=""  class="form-control">
-						  <option value="">РћС‚РµС† РёР»Рё РјР°С‚СЊ?</option>
-						<option value="РњР°С‚СЊ" id="РњР°С‚СЊ" >РњР°С‚СЊ</option>
-						<option value="РћС‚РµС†" id="РћС‚РµС†" >РћС‚РµС†</option>
-					  </select>*@
-					  <input type="text" class="form-control" asp-for="Sex" placeholder="РџСЂРѕС„РµСЃСЃРёСЏ РёР»Рё РїРѕР»">
+					  @*<div class="icon"><span class="ion-ios-arrow-down"></span></div>*@
+					  <input type="text"  asp-for="@Model.Sex" class="form-control" placeholder="Кто вы приходитесь ребенку?">
+						  
+					  <span asp-validation-for="Sex"></span>
 					</div>
 					  </div>
 							</div>
@@ -51,13 +53,20 @@
 						</div>
 						<div class="d-md-flex">
 							<div class="form-group">
-					  @*<textarea name="" id="" cols="30" rows="2" class="form-control" asp-for="Text" placeholder="РўРµРєСЃС‚"></textarea>*@
-					  @Html.TextAreaFor(x=>x.Text,new {@class="form-control",@placeholder="РўРµРєСЃС‚"})
+					  <input type="text"  class="form-control" asp-for="@Model.Text" placeholder="Текст" />
+					  <span asp-validation-for="Text"></span>
 					</div>
 					<div class="form-group ml-md-4">
-					  <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ" class="btn btn-secondary py-3 px-4">
+					  <input type="submit" value="Отправить" class="btn btn-secondary py-3 px-4">
 					</div>
 						</div>
 					</form>
 				</div>
 		</div>
+				
+				</div>
+					</section>
+    
+  
+
+ 

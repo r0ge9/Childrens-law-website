@@ -1,0 +1,32 @@
+﻿@{
+    @using Diplom.Service
+}
+<section class="hero-wrap hero-wrap-2" style="background-image: url(https://primamediamts.servicecdn.ru/f/big/3610/3609838.png?1bacce6a83c460be4076bbc74c79ad7a)">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <h1 class="mb-2 bread">Результаты теста</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="/Home/Index">Главная <i class="ion-ios-arrow-forward"></i></a></span><span class="mr-2"><a href="/Test/Tests">Тесты <i class="ion-ios-arrow-forward"></i></a></span> <span>Текущий тест <i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="ftco-section">
+       
+        <div class="ques">
+            <form asp-controller="Test" asp-action="Tests" method="">
+        <h1  align="center">Результаты теста: @Extensions.answers/@Extensions.count</h1>
+        
+        <center> <input  asp-controller="Test" asp-action="Tests" type="submit" value="Завершить" class="btn btn-primary py-3 px-5">
+        
+        </center>
+        </form>
+        </div>
+            
+           
+    </section>
+
+

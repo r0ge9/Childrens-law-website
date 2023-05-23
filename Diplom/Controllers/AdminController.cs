@@ -60,7 +60,7 @@ namespace Diplom.Controllers
         [HttpPost]
         public IActionResult EditTest(Test model)
         {
-            if (ModelState.IsValid)
+            if (model.Description!=null||model.Name!=null)
             {
                 data.Tests.SaveTest(model);
                 return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
