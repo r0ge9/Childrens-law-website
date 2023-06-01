@@ -17,7 +17,6 @@ namespace Diplom.Controllers
 		
 		public IActionResult Reviews()
 		{
-			ViewBag.Review = new Review();
 			return View(dataManager.Reviews.GetReviews());
 		}
 
@@ -35,7 +34,7 @@ namespace Diplom.Controllers
 			if (ModelState.IsValid)
 			{
 				dataManager.Reviews.SaveReview(model);
-				return RedirectToAction(nameof(HomeController.Index), nameof(HomeController).CutController());
+				return RedirectToAction(nameof(ReviewController.Reviews), nameof(ReviewController).CutController());
 			}
 			return View(model);
 		}

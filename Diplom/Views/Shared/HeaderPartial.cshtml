@@ -53,13 +53,13 @@
                 <li class="nav-item"><a href="/Home/About" class="nav-link">@viewLocalizer["About"]</a></li>
               <li class="nav-item"><a href="/Home/Contact" class="nav-link">@viewLocalizer["Contacts"]</a></li>
             </ul>
-            <form asp-controller="Home" asp-action="SetLanguage" style="margin-top:3px"
+           @* <form asp-controller="Home" asp-action="SetLanguage" style="margin-top:3px"
       asp-route-returnUrl="@Context.Request.Path"
       method="post" class="form-horizontal">
      <select name="culture" onchange="this.form.submit()"
                                     asp-for="@requestCulture.RequestCulture.UICulture.Name"
                                     asp-items="cultureItems"></select>
-</form>
+</form>*@
           </div>
         </div>
       </nav>

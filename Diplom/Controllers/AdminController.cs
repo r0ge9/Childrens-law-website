@@ -51,6 +51,15 @@ namespace Diplom.Controllers
         public IActionResult Tests()
         {
             return View(data.Tests.GetTests());
+        }public IActionResult Reviews()
+        {
+            return View(data.Reviews.GetReviews());
+        }
+        [HttpPost]
+        public IActionResult DeleteReview(int id)
+        {
+            data.Reviews.DeleteReview(id);
+            return RedirectToAction(nameof(AdminController.Reviews), nameof(AdminController).CutController());
         }
         public IActionResult EditTest(int id)
         {

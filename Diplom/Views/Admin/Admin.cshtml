@@ -1,4 +1,4 @@
-@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using Microsoft.AspNetCore.Mvc.Localization
 @using Microsoft.Extensions.Localization
 @inject IViewLocalizer localizer
 
@@ -48,6 +48,24 @@
                             </div>
                             <p>@localizer["TestsPage"]</p>
                             <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="Tests" asp-route-id="">@localizer["FollowBut"]</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="ftco-section">
+            <div class="container">
+
+                <h1 align="center">Отзывы</h1>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="pricing-entry bg-light pb-4 text-center">
+                            <div>
+                            </div> 
+                            <p>Страница с отзывами</p>
+                            <p class="button text-center"><a class="btn btn-primary px-4 py-3" asp-controller="Admin" asp-action="Reviews" asp-route-id="">@localizer["FollowBut"]</a></p>
                         </div>
                     </div>
                     

@@ -1,4 +1,4 @@
-@model Review
+п»ї@model Review
 	@{
 	@using Diplom.Domain.Entities
 
@@ -8,8 +8,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Наши отзывы</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>Отзывы <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-2 bread">РќР°С€Рё РѕС‚Р·С‹РІС‹</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a asp-controller="Home" asp-action="Index">Р“Р»Р°РІРЅР°СЏ <i class="ion-ios-arrow-forward"></i></a></span> <span>РћС‚Р·С‹РІС‹ <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -22,17 +22,17 @@
 				<div class="row justify-content-end">
 				<div class="col-md-6 py-5 px-md-5 bg-primary">
 			  <div class="heading-section heading-section-white ftco-animate mb-5">
-				<h2 class="mb-4">Оставьте отзыв!</h2>
+				<h2 class="mb-4">РћСЃС‚Р°РІСЊС‚Рµ РѕС‚Р·С‹РІ!</h2>
 				
 			  </div>
-			  <form asp-controller="Review" asp-action="AddReview" method="post" class="appointment-form ftco-animate">
+			  <form align="center" asp-controller="Review" asp-action="AddReview" method="post" class="appointment-form ftco-animate">
 						<div class="d-md-flex">
 							<div class="form-group">
-								<input type="text" class="form-control" asp-for="@Model.Name"  placeholder="Имя">
+								<input type="text" class="form-control" asp-for="@Model.Name"  placeholder="РРјСЏ">
 								<span asp-validation-for="Name"></span>
 							</div>
 							<div class="form-group ml-md-4">
-								<input type="text" class="form-control" asp-for="@Model.Image" placeholder="Ссылка">
+								<input type="text" class="form-control" asp-for="@Model.Image" placeholder="РЎСЃС‹Р»РєР°">
 								<span asp-validation-for="Image"></span>
 							</div>
 						</div>
@@ -41,7 +41,7 @@
 								<div class="form-field">
 							  <div class="select-wrap">
 					  @*<div class="icon"><span class="ion-ios-arrow-down"></span></div>*@
-					  <input type="text"  asp-for="@Model.Sex" class="form-control" placeholder="Кто вы приходитесь ребенку?">
+					  <input type="text"  asp-for="@Model.Sex" class="form-control" placeholder="РљС‚Рѕ РІС‹ РїСЂРёС…РѕРґРёС‚РµСЃСЊ СЂРµР±РµРЅРєСѓ?">
 						  
 					  <span asp-validation-for="Sex"></span>
 					</div>
@@ -53,11 +53,11 @@
 						</div>
 						<div class="d-md-flex">
 							<div class="form-group">
-					  <input type="text"  class="form-control" asp-for="@Model.Text" placeholder="Текст" />
+					  <input type="text"  class="form-control" asp-for="@Model.Text" placeholder="РўРµРєСЃС‚" />
 					  <span asp-validation-for="Text"></span>
 					</div>
 					<div class="form-group ml-md-4">
-					  <input type="submit" value="Отправить" class="btn btn-secondary py-3 px-4">
+					  <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ" class="btn btn-secondary py-3 px-4">
 					</div>
 						</div>
 					</form>

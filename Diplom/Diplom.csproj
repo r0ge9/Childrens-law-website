@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Admin\Reviews.cshtml" />
     <Content Remove="Views\Home\about.cshtml" />
     <Content Remove="Views\Home\contact.cshtml" />
     <Content Remove="Views\Home\Event.cshtml" />
@@ -27,6 +28,7 @@
 
   <ItemGroup>
     <None Include="Views\Admin\EditEvent.cshtml" />
+    <None Include="Views\Admin\Reviews.cshtml" />
     <None Include="Views\Admin\Tests.cshtml" />
     <None Include="Views\Admin\Admin.cshtml" />
     <None Include="Views\Admin\EditTest.cshtml" />
