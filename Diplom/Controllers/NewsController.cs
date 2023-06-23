@@ -15,7 +15,9 @@ namespace Diplom.Controllers
 		}
 		public IActionResult News()
 		{
-			return View(dataManager.Events.GetEvents());
+			var items = dataManager.Events.GetEvents().ToList();
+			items = items.OrderBy(x => x.Date).Reverse().ToList();
+            return View(items);
 		}
 	}
 }

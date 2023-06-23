@@ -2,7 +2,7 @@
 
 namespace Diplom.Domain.Repositories.Abstract
 {
-	public interface ITestRepository
+	public interface ITestRepository//интерфейс сущности теста БД
 	{
 		IQueryable<Test> GetTests();
 		Test GetTestById(int id);

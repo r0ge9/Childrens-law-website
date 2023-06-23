@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Diplom.Domain.Entities
 {
-    public class Question 
+    public class Question //сущность вопроса
     {
 		public Question()
 		{
@@ -14,9 +14,9 @@ namespace Diplom.Domain.Entities
         {
             TestId = testId;
         }
-        [Key]
+        [Key]//атрибут первичного ключа
         public int Id { get; set; }
-        [Required]
+        [Required]//атрибут обязательного ввода
         public string Title { get; set; }
         [Required]
         public string Answers { get; set; }

@@ -24,7 +24,9 @@ namespace Diplom.Controllers
 
         public IActionResult News()
         {
-            return View(data.Events.GetEvents());
+            var items = data.Events.GetEvents().ToList();
+            items = items.OrderBy(x => x.Date).Reverse().ToList();
+            return View(items);
         }
         public IActionResult EditEvent(int id)
         {
@@ -34,9 +36,16 @@ namespace Diplom.Controllers
         [HttpPost]
         public IActionResult EditEvent(Event model)
         {
+ 
             if (ModelState.IsValid)
             {
-
+                string[] text = model.Text.Split(' ');
+                if(text.Length<10)
+                {
+                    if (model.Image.Length <= 20)
+                        model.Image = "https://upload.wikimedia.org/wikipedia/commons/3/3d/%D0%9D%D0%B5%D1%82_%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F.jpg";
+                    return View(model);
+                }
                 data.Events.SaveEvent(model);
                 return RedirectToAction(nameof(AdminController.News), nameof(AdminController).CutController());
             }
@@ -71,6 +80,8 @@ namespace Diplom.Controllers
         {
             if (model.Description!=null||model.Name!=null)
             {
+                if (model.Image.Length <= 20)
+                    model.Image = "https://upload.wikimedia.org/wikipedia/commons/3/3d/%D0%9D%D0%B5%D1%82_%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F.jpg";
                 data.Tests.SaveTest(model);
                 return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
             }
@@ -90,11 +101,16 @@ namespace Diplom.Controllers
         [HttpPost]
         public IActionResult EditQuestion(Question model)
         {
-
-            data.Questions.SaveQuestion(model);
-            return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
-
-
+            if (model.Title != null || model.RightAnswer != null || model.Answers != null)
+            {
+                string[] text = model.Answers.Split(';') ;
+                if (text.Length<3)
+                    return View(model);
+                
+                data.Questions.SaveQuestion(model);
+                return RedirectToAction(nameof(AdminController.Tests), nameof(AdminController).CutController());
+            }
+            return View(model);
         }
         [HttpPost]
         public IActionResult DeleteQuestion(int id)

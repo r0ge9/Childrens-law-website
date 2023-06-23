@@ -11,25 +11,26 @@ namespace Diplom.Domain.Repositories.EF
 		{
 			this.context = context;
 		}
-		public IQueryable<Event> GetEvents()
+		public IQueryable<Event> GetEvents()//метод получения всех новостей из БД
 		{
 			return context.Events;
 		}
-		public Event GetEventById(int id) 
+		public Event GetEventById(int id) //метод получения новости по id
 		{
 			return context.Events.FirstOrDefault(x => x.Id == id);
 		}
-		public Event GetEventByName(string name)
+		public Event GetEventByName(string name)//метод получения новости по названию
 		{
 			return context.Events.FirstOrDefault(e => e.Name == name);
 		}
-		public void SaveEvent(Event entity) 
+		public void SaveEvent(Event entity) //метод сохранения новой или измененной новости
 		{
 			if (entity.Id == default(int)) { context.Entry(entity).State = EntityState.Added; }
 			else { context.Entry(entity).State = EntityState.Modified; }
 			context.SaveChanges();
 		}
-		public void DeleteEvent(int id) { 
+		public void DeleteEvent(int id) //метод удаления новости из БД по id
+		{ 
 			context.Events.Remove(new Event() { Id = id });
 			context.SaveChanges();
 		}

@@ -1,4 +1,4 @@
-@model IQueryable<Event>
+@model List<Event>
 @inject IViewLocalizer localizer
     @{
         @using Diplom.Service
@@ -24,7 +24,7 @@
 				<div class="row">
             @if(Model.Any())
             {
-                @foreach(Event entity in Model)
+                @foreach(Event entity in Model)//отрисовка всех новостей
                 {
                             <div class="col-md-6 col-lg-4 ftco-animate">
                     <div class="blog-entry">
@@ -41,13 +41,13 @@
                                     var short_text = entity.Text.Split(' ');
                                 }
                                 
-                                @for(int i=0;i<15;i++)
+                                @for(int i=0;i<10;i++)//алгоритм по вставке короткого текста
                                     {
                                     @Html.Raw(short_text[i]+' ')
                                     ;
-                                    if(i==14)
+                                    if(i==9)
                                     {
-                                        @Html.Raw(short_text[i]+"...")
+                                        @Html.Raw("...")
                                     }
                                 }
                                 <div class="d-flex align-items-center mt-4">

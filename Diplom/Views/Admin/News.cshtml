@@ -1,4 +1,4 @@
-@model IQueryable<Event>
+@model List<Event>
     @{
         @using Diplom.Service
         @using Diplom.Domain.Entities
@@ -42,13 +42,13 @@
                                     var short_text = entity.Text.Split(' ');
                                 }
                                 
-                                    @for (int i = 0; i < 15; i++)
+                                    @for (int i = 0; i < 10; i++)
                                     {
                                         @Html.Raw(short_text[i]+' ')
                                         
-                                        if (i == 14)
+                                        if (i == 9)
                                         {
-                                            @Html.Raw(short_text[i]+"...")
+                                            @Html.Raw("...")
                                         }
                                     }
                                 <div class="d-flex align-items-center mt-4">

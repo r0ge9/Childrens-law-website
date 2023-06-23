@@ -1,6 +1,6 @@
 ﻿namespace Diplom.Domain.Entities
 {
-    public class Admin
+    public class Admin//сущность администратора
     {
         public int Id { get; set; }
         public string Email { get; set; }

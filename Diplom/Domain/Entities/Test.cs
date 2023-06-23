@@ -6,17 +6,17 @@ using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribut
 
 namespace Diplom.Domain.Entities
 {
-	public  class Test
+	public  class Test//сущность теста
 	{
-		[Key]
+		[Key]//атрибуи первичного ключа
 		public int Id { get; set; }
-		[Required]
+		[Required]//атрибут для обязательного ввода
 		public string Name { get; set; }
 		[Required]
 		public string Description { get; set; }
 		[Required]
 		public string Image { get; set; }
-		[ForeignKey("TestId")]
+		[ForeignKey("TestId")]//атрибут внешнего ключа
 		
 		public List<Question> Questions { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace Diplom.Domain.Repositories.Abstract
 {
-	public interface IReviewRepository
+	public interface IReviewRepository//интерфейс сущности отзыва БД
 	{
 		IQueryable<Review> GetReviews();
 		Review GetReviewById(int id);

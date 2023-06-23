@@ -6,12 +6,12 @@ using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribut
 
 namespace Diplom.Domain.Entities
 {
-	public  class Review
+	public  class Review//сущность отзыва
 	{
 		[Key]
 		public int Id { get; set; }
 
-		[Display(Name ="FullName"),Required]
+		[Display(Name ="FullName"),Required]//атрибут для обязательного ввода
 		public string Name { get; set; }
 
 		[Required]

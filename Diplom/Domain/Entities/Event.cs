@@ -4,13 +4,13 @@ using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribut
 
 namespace Diplom.Domain.Entities
 {
-	public  class Event
+	public  class Event//сущность новости
 	{
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "NameRequired")]
-        [StringLength(50, ErrorMessage = "NameLength")]
-        [Display(Name = "Name")]
+        [Required(ErrorMessage = "NameRequired")]//атрибут для проверки на заполненное поле
+        [StringLength(50, ErrorMessage = "NameLength")]//атрибут для проверки на длину значения
+        [Display(Name = "Name")]//атрибут для отображения текста "Название"
         public string Name { get; set; }
         [Required(ErrorMessage = "DateRequired")]
         [Display(Name = "Date")]
